@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 1c638333cce2c3143b71f35d68a0f540
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - QORE
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: bc51b11a23cbe3041a321b8c9408667a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Dimplomat
+  m_Controller: {fileID: 9100000, guid: 0bee24d0c22a9134faf22e711073bafc, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 641136364113939877, guid: fb6398bb0de02df40a32013c8633ba90, type: 3}
+    m_OverrideClip: {fileID: 641136364113939877, guid: ba4aff1f80d0a8147843fd21eea109f0, type: 3}
+  - m_OriginalClip: {fileID: -623603649343465320, guid: fb6398bb0de02df40a32013c8633ba90, type: 3}
+    m_OverrideClip: {fileID: -623603649343465320, guid: ba4aff1f80d0a8147843fd21eea109f0, type: 3}
+  - m_OriginalClip: {fileID: -7513944936651426453, guid: fb6398bb0de02df40a32013c8633ba90, type: 3}
+    m_OverrideClip: {fileID: -7513944936651426453, guid: ba4aff1f80d0a8147843fd21eea109f0, type: 3}
+  - m_OriginalClip: {fileID: 3433998424526246761, guid: fb6398bb0de02df40a32013c8633ba90, type: 3}
+    m_OverrideClip: {fileID: -7513944936651426453, guid: ba4aff1f80d0a8147843fd21eea109f0, type: 3}
