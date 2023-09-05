@@ -19,8 +19,8 @@ public class GunsInv : MonoBehaviour
 
     public void Give(){
         string input = inputField.text;
-        string pattern = @"^Give\s.*$"; // Регулярное выражение
-
+        string pattern = @"^Give\s.*$"; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+      
         bool isMatch = Regex.IsMatch(input, pattern);
 
         if (isMatch) {

@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a85cd300ac27344e96c87c7d5a8add7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemys_health: 100
+  Enemys_health: 300
   controlled_Door: []
   Enemys_Max_health: 0
   Explode: {fileID: 6170475625676571393, guid: 889e8f6dbcaa9e845b5d77c5ea4290b0, type: 3}

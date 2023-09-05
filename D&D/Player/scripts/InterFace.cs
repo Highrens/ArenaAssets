@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -12,8 +13,15 @@ public class InterFace : MonoBehaviour
 
     public bool gameIsPaused;
     public Text gameComplited;
+    public AudioMixer audioMixer;
+    public Slider audioSlider;
     private void Start()
     {
+        if (PlayerPrefs.HasKey("audioVolume")){
+            float lvl = PlayerPrefs.GetFloat("audioVolume");
+            VolumeControl(lvl);
+            audioSlider.value = lvl;
+        }
         // AL = GetComponentInChildren<AudioListener>();
         gameComplited.text = "Game complited: " + PlayerPrefs.GetInt("SavedInteger").ToString();
         gameIsPaused = false;
@@ -50,9 +58,16 @@ public class InterFace : MonoBehaviour
             PauseMenu.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            
+
         }
     }
+
+    public void VolumeControl(float volumeLvl)
+    {
+        audioMixer.SetFloat("audioVolume", volumeLvl * 40 - 20);
+        PlayerPrefs.SetFloat("audioVolume", volumeLvl);
+    }
+
     public void Reload()
     {
         SceneManager.LoadScene(sceneint);

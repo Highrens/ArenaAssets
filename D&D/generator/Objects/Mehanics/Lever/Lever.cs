@@ -24,7 +24,7 @@ public class Lever : MonoBehaviour
         {
             if (Target[i] != null)
             {
-                if (Target[i].GetComponentInParent<doors>() != null) Target[i].GetComponentInParent<doors>().ChangeState();
+                Target[i].GetComponentInParent<doors>()?.ChangeState();
                 if (Target[i].GetComponentInParent<MultiLeverDoor>() != null)
                 {
 
@@ -52,10 +52,8 @@ public class Lever : MonoBehaviour
                 {
                     Target[i].GetComponent<LightWay>().state = !Target[i].GetComponent<LightWay>().state;
                 }
-                if (Target[i].GetComponent<Arena>() != null)
-                {
-                    Target[i].GetComponent<Arena>().ArenaStart();
-                }
+                Target[i].GetComponent<Arena>()?.ArenaStart();
+                Target[i].GetComponentInParent<ForwardArena>()?.FDArenaStart();
             }
         }
     }

@@ -123,7 +123,7 @@ public class Arena : MonoBehaviour
     public void SpawnEnemy()
     {
         spawnedEnemys.Clear();
-        int maxEnemy = waveNumber + startSpawn;
+        int maxEnemy = waveNumber + startSpawn + 2;
         if (maxEnemy > maxEnemys) maxEnemy = maxEnemys;
 
         for (int i = startSpawn; i < maxEnemy; i++)
