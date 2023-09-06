@@ -6,17 +6,17 @@ using UnityEngine;
 public class Level_Generator : MonoBehaviour
 {
     public int roomcount;
-     int roomcount_max;
+    int roomcount_max;
     int i = 1;
 
     public GameObject[] RoomPrefabs;
-   public  GameObject[] placedroom;
+    public GameObject[] placedroom;
     public GameObject firstRoom;
     public GameObject finishRoom;
     public GameObject[] BossRooms;
     public GameObject[] prize_room;
     public GameObject[] ShopRoom;
-      int selectedRoom;
+    int selectedRoom;
     public float Distance;
     int room_spawned_amount = 1;
     // Start is called before the first frame update
@@ -30,18 +30,15 @@ public class Level_Generator : MonoBehaviour
         placedroom[roomcount_max - 2] = BossRooms[Random.Range(0, BossRooms.Length)]; // Босс
         placedroom[roomcount_max - 1] = finishRoom; // RoomPrefabs[0]; //Финиш
 
-
         for (i = 1; i < roomcount_max; i++)
         {
-           
+
             Place_room();
         }
-       
-    }
 
-    void  Place_room()
+    }
+    void Place_room()
     {
-       
         //  selectedRoom = Random.Range(0, RoomPrefabs.Length);
 
         if (placedroom[i] == null)
@@ -51,16 +48,15 @@ public class Level_Generator : MonoBehaviour
             placedroom[i] = Instantiate(RoomPrefabs[selectedRoom],
                                   placedroom[i - 1].GetComponent<Room>().Enter_to_new_room.position,
                                   transform.rotation);
-           
         }
         else
         {
 
-                placedroom[i] = Instantiate(placedroom[i],
-                                     placedroom[i - 1].GetComponent<Room>().Enter_to_new_room.position,
-                                     transform.rotation);
+            placedroom[i] = Instantiate(placedroom[i],
+                                 placedroom[i - 1].GetComponent<Room>().Enter_to_new_room.position,
+                                 transform.rotation);
         }
-      
+
     }
     private void GetRandomChunk()
     {
@@ -73,7 +69,7 @@ public class Level_Generator : MonoBehaviour
                 if (placedroom[r] != null && (RoomPrefabs[x].name + "(Clone)") == placedroom[r].name)
                 {
                     room_spawned_amount += 10;
-                  
+
                 }
             }
             chances.Add(RoomPrefabs[x].GetComponent<Room>().Chance / (room_spawned_amount));
@@ -81,7 +77,7 @@ public class Level_Generator : MonoBehaviour
         }
 
         float value = Random.Range(0, chances.Sum());
-      
+
         float sum = 0;
 
         for (int i = 0; i < chances.Count; i++)
@@ -95,6 +91,6 @@ public class Level_Generator : MonoBehaviour
             }
 
         }
-   
+
     }
 }

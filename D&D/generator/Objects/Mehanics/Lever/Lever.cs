@@ -53,7 +53,7 @@ public class Lever : MonoBehaviour
                     Target[i].GetComponent<LightWay>().state = !Target[i].GetComponent<LightWay>().state;
                 }
                 Target[i].GetComponent<Arena>()?.ArenaStart();
-                Target[i].GetComponentInParent<ForwardArena>()?.FDArenaStart();
+                Target[i].GetComponent<ForwardArena>()?.FDArenaStart();
             }
         }
     }
