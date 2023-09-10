@@ -21587,6 +21587,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6258119790572962215, guid: 51258a92e61878f459fb2537ed7474de, type: 3}
+      propertyPath: controlled_Door.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258119790572962215, guid: 51258a92e61878f459fb2537ed7474de, type: 3}
+      propertyPath: controlled_Door.Array.data[0]
+      value: 
+      objectReference: {fileID: 2141919264731386654}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51258a92e61878f459fb2537ed7474de, type: 3}
 --- !u!4 &6527394053645316745 stripped
@@ -21860,6 +21868,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6258119790572962215, guid: 51258a92e61878f459fb2537ed7474de, type: 3}
+      propertyPath: controlled_Door.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258119790572962215, guid: 51258a92e61878f459fb2537ed7474de, type: 3}
+      propertyPath: controlled_Door.Array.data[0]
+      value: 
+      objectReference: {fileID: 2141919264731386654}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51258a92e61878f459fb2537ed7474de, type: 3}
 --- !u!4 &8854936655410586865 stripped
@@ -21947,6 +21963,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6258119790572962215, guid: 51258a92e61878f459fb2537ed7474de, type: 3}
+      propertyPath: controlled_Door.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258119790572962215, guid: 51258a92e61878f459fb2537ed7474de, type: 3}
+      propertyPath: controlled_Door.Array.data[0]
+      value: 
+      objectReference: {fileID: 2141919264731386654}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51258a92e61878f459fb2537ed7474de, type: 3}
 --- !u!4 &7565064859638753713 stripped
@@ -22020,6 +22044,84 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6665801792835677109, guid: 52dd107330e651b49a3a513159c63718, type: 3}
   m_PrefabInstance: {fileID: 4697641170338183577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5416345697750161701
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2906991825111006186}
+    m_Modifications:
+    - target: {fileID: 6238358006530853429, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853429, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853429, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853429, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853429, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853429, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853429, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853429, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853429, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853429, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853429, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853429, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853429, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853429, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853432, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: Levers
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6238358006530853435, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+      propertyPath: m_Name
+      value: SphereBlock
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+--- !u!1 &2141919264731386654 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6238358006530853435, guid: 8b15a4d2a402aa142b1fbe11f6655292, type: 3}
+  m_PrefabInstance: {fileID: 5416345697750161701}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5457556111087120450
 PrefabInstance:
@@ -22096,6 +22198,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6258119790572962215, guid: 51258a92e61878f459fb2537ed7474de, type: 3}
+      propertyPath: controlled_Door.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258119790572962215, guid: 51258a92e61878f459fb2537ed7474de, type: 3}
+      propertyPath: controlled_Door.Array.data[0]
+      value: 
+      objectReference: {fileID: 2141919264731386654}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51258a92e61878f459fb2537ed7474de, type: 3}
 --- !u!4 &2117937111875039715 stripped

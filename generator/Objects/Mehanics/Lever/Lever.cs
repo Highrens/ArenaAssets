@@ -25,17 +25,19 @@ public class Lever : MonoBehaviour
             if (Target[i] != null)
             {
                 Target[i].GetComponentInParent<doors>()?.ChangeState();
-                if (Target[i].GetComponentInParent<MultiLeverDoor>() != null)
+                if (Target[i].GetComponentInParent<MultiLeverDoor>())
                 {
-
+                    MultiLeverDoor MLD  = Target[i].GetComponent<MultiLeverDoor>();
                     if (t == true)
                     {
-                        Target[i].GetComponent<MultiLeverDoor>().signals += 1;
+                        MLD.signals += 1;
+                        MLD.ChangeState();
                         t = !t;
                     }
                     else
                     {
-                        Target[i].GetComponent<MultiLeverDoor>().signals -= 1;
+                        MLD.signals -= 1;
+                        MLD.ChangeState();
                         t = !t;
                     }
                 }

@@ -30,7 +30,10 @@ public class Enemy_Health : MonoBehaviour
                 {
                     if (controlled_Door[i] != null)
                     {
-                        controlled_Door[i].GetComponent<MultiLeverDoor>().signals += 1;
+                        
+                        MultiLeverDoor MLD  = controlled_Door[i].GetComponent<MultiLeverDoor>();
+                        MLD.GetComponent<MultiLeverDoor>().signals += 1;
+                        MLD.ChangeState();
                     }                
                 }
             if (Loot != null && Random.value > Chance_no_drop) Instantiate(Loot, transform.position, transform.rotation * Quaternion.Euler(90, 0, 0));

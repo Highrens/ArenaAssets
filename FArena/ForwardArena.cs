@@ -76,5 +76,6 @@ public class ForwardArena : MonoBehaviour
         FDNextRoom.front.SetActive(true);
         FDNextRoom.id = FDprevRoom.id + 1;
         FDNextRoom.lever.Target[^1] = gameObject;
+        
     }
 }
