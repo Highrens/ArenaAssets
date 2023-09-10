@@ -361,7 +361,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.8649347, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.106095314, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1301,6 +1301,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 848914465686127599, guid: cf57cf939cfa41f4d87a1cb9a310c8d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195344221385129274, guid: cf57cf939cfa41f4d87a1cb9a310c8d7, type: 3}
+      propertyPath: m_Color.b
+      value: 0.754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195344221385129274, guid: cf57cf939cfa41f4d87a1cb9a310c8d7, type: 3}
+      propertyPath: m_Color.g
+      value: 0.68622565
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195344221385129274, guid: cf57cf939cfa41f4d87a1cb9a310c8d7, type: 3}
+      propertyPath: m_Color.r
+      value: 0.43716624
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195344221385129274, guid: cf57cf939cfa41f4d87a1cb9a310c8d7, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

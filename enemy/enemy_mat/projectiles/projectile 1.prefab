@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fd0e2c45fca384a95e2d636c9195e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 45
+  Speed: 35
   Damage: 15
   destroyByWalls: 1
   armor_penetration: 0.5

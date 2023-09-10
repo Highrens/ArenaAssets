@@ -27,6 +27,7 @@ public class pistol_n : MonoBehaviour
     public int shotAmount = 1;
     public bool IsGunAutomatic;
     public float reload_time;
+    public float second_reload_time;
     public bool reload_by_one = false;
 
     float t = 5f;
@@ -257,7 +258,7 @@ public class pistol_n : MonoBehaviour
             {
 
                 PT.SetTrigger("reload_again");
-                yield return new WaitForSeconds(reload_time);
+                yield return new WaitForSeconds(second_reload_time);
                 Type.SetValue(AmmoScriptObj, fullAmmo - 1);
                 ammo++;
             }

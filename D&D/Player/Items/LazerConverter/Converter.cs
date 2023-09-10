@@ -24,10 +24,15 @@ public class Converter : MonoBehaviour
                 }
                 weapon.PS_obj = lazerPsObj;
             }
-           
-
+            if (weapon.ammoType != "")
+            {
+                weapon.ammoType = "specialAmmo";
+            }
 
         }
+        AmmoScript ammoScript = gameObject.transform.root.GetComponentInChildren<AmmoScript>();
+
+        ammoScript.specialAmmo = (ammoScript.specialAmmo + ammoScript.shotgunAmmo + ammoScript.bigAmmo + ammoScript.mediumAmmo + ammoScript.pistolAmmo) / 2;
         Destroy(gameObject);
     }
 }

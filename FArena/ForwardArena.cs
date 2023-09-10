@@ -9,12 +9,22 @@ public class ForwardArena : MonoBehaviour
     public GameObject[] ArenaPrefabs;
     public GameObject[] ShopPrefabs;
     public GameObject[] BossesPrefabs;
-
+    public GameObject[] PrizePrefabs;
+    int prizenumber;
     public GameObject previosArena;
     public GameObject nextArena;
     public List<GameObject> spawnedEnemys = new List<GameObject>();
     public Lever lever;
-    // Start is called before the first frame update
+
+    private void Start()
+    {
+        prizenumber = Random.Range(1, 10);
+        if (prizenumber % 5 == 0)
+        {
+            prizenumber--;
+        }
+    }
+
     public void FDArenaStart()
     {
         ForwardArena_Room curretArena = nextArena.GetComponent<ForwardArena_Room>();
@@ -22,23 +32,31 @@ public class ForwardArena : MonoBehaviour
         int ArenaNum;
         GameObject Arena;
         Debug.Log(curretArena.id % 5);
-        if (curretArena.id % 5 == 0 && curretArena.id != 0)
+
+        if (curretArena.id + 1 == prizenumber)
         {
-            ArenaNum = Random.Range(0, ShopPrefabs.Length - 1);
+            ArenaNum = Random.Range(0, PrizePrefabs.Length);
+            Arena = Instantiate(PrizePrefabs[ArenaNum],
+                curretArena.EnterToNewArena.position,
+                transform.rotation);
+        }
+        else if (curretArena.id % 5 == 0 && curretArena.id != 0)
+        {
+            ArenaNum = Random.Range(0, ShopPrefabs.Length);
             Arena = Instantiate(ShopPrefabs[ArenaNum],
                 curretArena.EnterToNewArena.position,
                 transform.rotation);
         }
         else if (curretArena.id % 11 == 0 && curretArena.id != 0)
         {
-            ArenaNum = Random.Range(0, BossesPrefabs.Length - 1);
+            ArenaNum = Random.Range(0, BossesPrefabs.Length);
             Arena = Instantiate(BossesPrefabs[ArenaNum],
                 curretArena.EnterToNewArena.position,
                 transform.rotation);
         }
         else
         {
-            ArenaNum = Random.Range(0, ArenaPrefabs.Length - 1);
+            ArenaNum = Random.Range(0, ArenaPrefabs.Length);
             Arena = Instantiate(ArenaPrefabs[ArenaNum],
                 curretArena.EnterToNewArena.position,
                 transform.rotation);

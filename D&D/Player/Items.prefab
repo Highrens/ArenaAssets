@@ -155,6 +155,37 @@ Transform:
   m_Father: {fileID: 4744338226093120835}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -41.588, y: -0.24, z: 0.162}
+--- !u!1 &1537846483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1537846484}
+  m_Layer: 0
+  m_Name: Shot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1537846484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537846483}
+  m_LocalRotation: {x: -0.5664947, y: 0.000000020489091, z: -0.00000023841852, w: 0.8240655}
+  m_LocalPosition: {x: 0, y: -0.547, z: 1.375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4744338225190043940}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -69.012, y: 0, z: 0}
 --- !u!1 &1605522800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,6 +1210,7 @@ Transform:
   - {fileID: 8164928390182928591}
   - {fileID: 8164928389877092361}
   - {fileID: 8164928388550601572}
+  - {fileID: 8164928388909534318}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1234,6 +1266,7 @@ MonoBehaviour:
   - {fileID: 8792283974155852405}
   - {fileID: 8792283974586075827}
   - {fileID: 8792283972525617630}
+  - {fileID: 8792283973415130836}
 --- !u!114 &574559201334888180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2097,6 +2130,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 1
   reload_time: 2
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -15652,6 +15686,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 1
   reload_time: 2
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -16605,6 +16640,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 1
   reload_time: 2.44
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -21946,6 +21982,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 2
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -23281,6 +23318,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 2
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -26546,6 +26584,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 3.5
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -27184,13 +27223,14 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 5639616944541e7498bd292b78abf66d, type: 3}
   item: {fileID: 1274329066889372703, guid: 5d4ac8102d7ee07468e9276dae3fcd5e, type: 3}
   shot_dot: {fileID: 0}
-  Spread: 0.05
+  Spread: 0.03
   time_to_shot: 0.1
   damage: 45
   mobility: 82
   shotAmount: 1
   IsGunAutomatic: 1
   reload_time: 4
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -27843,13 +27883,14 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 771a4a928f1f2014d8327831955c1598, type: 3}
   item: {fileID: 8795530097461980997, guid: c84b2cfa73ce4174eb3f6f9bb176da68, type: 3}
   shot_dot: {fileID: 6203317279677291314}
-  Spread: 0.025
+  Spread: 0.015
   time_to_shot: 0.1
   damage: 100
   mobility: 80
   shotAmount: 1
   IsGunAutomatic: 1
   reload_time: 2
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -28316,6 +28357,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 2
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -28776,13 +28818,14 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: cb384aad3122cb543ae2c7fab603ead9, type: 3}
   item: {fileID: 2251980891763986036, guid: a0e72ad71e292ab4cac26949504ed77b, type: 3}
   shot_dot: {fileID: 6203317280705763209}
-  Spread: 0.1
+  Spread: 0.09
   time_to_shot: 0.6
   damage: 25
   mobility: 85
   shotAmount: 8
   IsGunAutomatic: 0
   reload_time: 0.7
+  second_reload_time: 0
   reload_by_one: 1
   zoom: 0
   reloading: 0
@@ -29247,7 +29290,7 @@ AudioSource:
   m_GameObject: {fileID: 808492191352997603}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c748b84b4cf8a7744be56b3ce328c501, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -29380,6 +29423,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 2
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -29896,13 +29940,14 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: eefce8bd65b1bce448f41fd6f8ca15aa, type: 3}
   item: {fileID: 1818165815962369553, guid: 6243b54f26f1e494ebe8702c230cff81, type: 3}
   shot_dot: {fileID: 6203317280533540208}
-  Spread: 0.09
+  Spread: 0.11
   time_to_shot: 0.2
   damage: 12
   mobility: 89
   shotAmount: 12
   IsGunAutomatic: 0
   reload_time: 3.8
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -30056,6 +30101,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 2
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -30522,6 +30568,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 1
   reload_time: 0.7
+  second_reload_time: 0.7
   reload_by_one: 1
   zoom: 0
   reloading: 0
@@ -30923,7 +30970,7 @@ AudioSource:
   m_GameObject: {fileID: 808492190959281613}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c748b84b4cf8a7744be56b3ce328c501, type: 2}
   m_audioClip: {fileID: 8300000, guid: a92a241b6da6ad24bb9936edbbc61980, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -31422,7 +31469,7 @@ AudioSource:
   m_GameObject: {fileID: 808492190171739493}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c748b84b4cf8a7744be56b3ce328c501, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -31572,6 +31619,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 1.5
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -32110,13 +32158,14 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: e604a60af726169489ed77e5f83c76e0, type: 3}
   item: {fileID: 719142681360935151, guid: 988032926a4dc2447833ebc03c0b0f86, type: 3}
   shot_dot: {fileID: 6203317279850091567}
-  Spread: 0.1
+  Spread: 0.09
   time_to_shot: 0.25
   damage: 25
   mobility: 87
   shotAmount: 8
   IsGunAutomatic: 0
   reload_time: 0.7
+  second_reload_time: 0
   reload_by_one: 1
   zoom: 0
   reloading: 0
@@ -32594,6 +32643,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 3
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -33025,7 +33075,7 @@ AudioSource:
   m_GameObject: {fileID: 3411375362748468521}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c748b84b4cf8a7744be56b3ce328c501, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -33184,13 +33234,14 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: d3d14148f0572b94181a5ae764395551, type: 3}
   item: {fileID: 6368677181788945378, guid: 9ffc971fcc9a5d446bc420003b3206c2, type: 3}
   shot_dot: {fileID: 3526959009928873821}
-  Spread: 0
+  Spread: 0.01
   time_to_shot: 0.15
   damage: 35
   mobility: 100
   shotAmount: 1
   IsGunAutomatic: 1
   reload_time: 2
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -33365,13 +33416,14 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 5639616944541e7498bd292b78abf66d, type: 3}
   item: {fileID: 3539715439510345018, guid: b9c4b83cb8dc65742b3a65ad665682e9, type: 3}
   shot_dot: {fileID: 7125469812469426306}
-  Spread: 0.05
+  Spread: 0.025
   time_to_shot: 0.1
   damage: 45
   mobility: 82
   shotAmount: 1
   IsGunAutomatic: 1
   reload_time: 3.1
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -33700,6 +33752,10 @@ PrefabInstance:
       propertyPath: Hit_ps
       value: 
       objectReference: {fileID: 6109868068485120780, guid: 10dbcdc39c79fd345b3bd4b57f052de7, type: 3}
+    - target: {fileID: 5700630865638529830, guid: 6713740764842e64d8131b1a5021f415, type: 3}
+      propertyPath: Spread
+      value: 0.025
+      objectReference: {fileID: 0}
     - target: {fileID: 5700630865638529830, guid: 6713740764842e64d8131b1a5021f415, type: 3}
       propertyPath: ammoType
       value: mediumAmmo
@@ -34163,6 +34219,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 1
   reload_time: 1.8
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -34419,13 +34476,14 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 4731944b736923642aced85e58194fa3, type: 3}
   item: {fileID: 775997891111791989, guid: 770434d8035448744bcafe36add9268a, type: 3}
   shot_dot: {fileID: 8558280070680643679}
-  Spread: 0.08
+  Spread: 0.06
   time_to_shot: 0.075
   damage: 33
   mobility: 89
   shotAmount: 1
   IsGunAutomatic: 1
   reload_time: 1.81
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -34865,6 +34923,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 1
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -35132,13 +35191,14 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 5639616944541e7498bd292b78abf66d, type: 3}
   item: {fileID: 8605799817513776490, guid: 703955654ef93b24d84b998ca1436e12, type: 3}
   shot_dot: {fileID: 8558280070288877563}
-  Spread: 0.067
+  Spread: 0.047
   time_to_shot: 0.075
   damage: 45
   mobility: 90
   shotAmount: 1
   IsGunAutomatic: 1
   reload_time: 3.1
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -35698,6 +35758,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 4
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -35873,6 +35934,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 0
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -36395,6 +36457,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 4
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -36801,7 +36864,7 @@ AudioSource:
   m_GameObject: {fileID: 7514326347441719647}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c748b84b4cf8a7744be56b3ce328c501, type: 2}
   m_audioClip: {fileID: 8300000, guid: a92a241b6da6ad24bb9936edbbc61980, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -37158,6 +37221,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 1
   reload_time: 2.2
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -37680,7 +37744,7 @@ MonoBehaviour:
   projectile: {fileID: 0}
   point: {fileID: 574559202556330390}
   Hit_ps: {fileID: 6109868068485120780, guid: 10dbcdc39c79fd345b3bd4b57f052de7, type: 3}
-  PS_obj: {fileID: 3202677528027382588, guid: eefce8bd65b1bce448f41fd6f8ca15aa, type: 3}
+  PS_obj: {fileID: 3202677528027382588, guid: e604a60af726169489ed77e5f83c76e0, type: 3}
   item: {fileID: 3553150316145004025, guid: 4508aaf3cffb38249930070b5fddd1f5, type: 3}
   shot_dot: {fileID: 1984554443}
   Spread: 0.07
@@ -37690,6 +37754,7 @@ MonoBehaviour:
   shotAmount: 12
   IsGunAutomatic: 0
   reload_time: 3.3
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -38156,6 +38221,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 3.02
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -38640,13 +38706,14 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: eefce8bd65b1bce448f41fd6f8ca15aa, type: 3}
   item: {fileID: 3256064816271115614, guid: 1bd4a75c479e76e4f8d93c240308f709, type: 3}
   shot_dot: {fileID: 75110605}
-  Spread: 0.13
+  Spread: 0.1
   time_to_shot: 0.125
   damage: 20
   mobility: 78
   shotAmount: 10
   IsGunAutomatic: 0
   reload_time: 3.3
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -38689,6 +38756,177 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationX: -1.2
   rotationY: -1.35
+  angleRecoil: 0
+  player: {fileID: 0}
+--- !u!1001 &8558280070253898629
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 574559201334888182}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+      propertyPath: m_RootOrder
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65702495048144492, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+      propertyPath: m_Name
+      value: gp6anim
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+--- !u!4 &4744338225190043940 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3968331098899573409, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+  m_PrefabInstance: {fileID: 8558280070253898629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8164928388909534318 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+  m_PrefabInstance: {fileID: 8558280070253898629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8792283973415130836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a427b827b26736449d3d36fcf88f6b1, type: 3}
+  m_PrefabInstance: {fileID: 8558280070253898629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1092600707
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8792283973415130836}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50626623f01aa2a4abe3959cebefdefa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1092600704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8792283973415130836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 338afa012bc3b5441aa2f70a82aeeef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lazerType: 1
+  projectile: {fileID: 8453685565696371930, guid: 1b69f8b94d400bf4a91aba1d03b74c9e, type: 3}
+  point: {fileID: 574559202556330390}
+  Hit_ps: {fileID: 6109868068485120780, guid: 10dbcdc39c79fd345b3bd4b57f052de7, type: 3}
+  PS_obj: {fileID: 3202677528027382588, guid: c5422cc5b34894b43981b0bf81b22397, type: 3}
+  item: {fileID: 2016202941475938998, guid: cab5c78e8ba95394aa396e29ffe78843, type: 3}
+  shot_dot: {fileID: 1537846484}
+  Spread: 0.01
+  time_to_shot: 0.6
+  damage: 200
+  mobility: 80
+  shotAmount: 1
+  IsGunAutomatic: 0
+  reload_time: 0.7
+  second_reload_time: 1.75
+  reload_by_one: 1
+  zoom: 0
+  reloading: 0
+  ammo: 6
+  ammo_max: 6
+  ammoType: mediumAmmo
+  backpackAmmo_txt: {fileID: 0}
+  ammo_txt: {fileID: 0}
+  icon: {fileID: 21300000, guid: 797db2df44a4c2a4ca8e23d03b5198f2, type: 3}
+  type: default middleSilencer
+  reloadAudio: {fileID: 0}
+--- !u!114 &1092600705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8792283973415130836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1561dd664277d3e4898a2bd4bf6e9e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scopeSpeed: 2
+  sight: {fileID: 0}
+  zoom: 0
+  zoom_vector: {x: -0.42, y: 0.15, z: -0.18}
+  cross: {fileID: 6203317281137179397}
+--- !u!114 &1092600706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8792283973415130836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0156227d4d80c343bff09fa70de6522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationX: -0.6
+  rotationY: -1.27
   angleRecoil: 0
   player: {fileID: 0}
 --- !u!1001 &8558280070571150479
@@ -39174,7 +39412,7 @@ MonoBehaviour:
   point: {fileID: 574559202556330390}
   Hit_ps: {fileID: 6109868068485120780, guid: 10dbcdc39c79fd345b3bd4b57f052de7, type: 3}
   PS_obj: {fileID: 180765463032455226, guid: 3843e8a3f5aaa0a47af2deb5db9bb1dc, type: 3}
-  item: {fileID: 5643803229730967314, guid: 4e2c23f4a281ace4389036cc1e3edbde, type: 3}
+  item: {fileID: 7366792914524378970, guid: 8d6df3b4552a81042b7c9073e8134051, type: 3}
   shot_dot: {fileID: 708528912}
   Spread: 0.01
   time_to_shot: 0.3
@@ -39183,6 +39421,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 1
   reload_time: 2
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0
@@ -39346,6 +39585,7 @@ MonoBehaviour:
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 2
+  second_reload_time: 0
   reload_by_one: 0
   zoom: 0
   reloading: 0

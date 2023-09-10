@@ -44,10 +44,7 @@ public class Enemy_Health : MonoBehaviour
             {
                 Instantiate(Explode, transform.position, transform.rotation);
             }
-            if (GetComponentInParent<Boss_health_bar>() != null)
-            {
-                GetComponentInParent<Boss_health_bar>().TakeAchivement();
-            }
+            GetComponentInParent<Boss_health_bar>()?.TakeAchivement();
             Destroy(gameObject);
         }
     }
