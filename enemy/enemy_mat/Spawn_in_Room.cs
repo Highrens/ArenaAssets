@@ -8,6 +8,7 @@ public class Spawn_in_Room : MonoBehaviour
     GameObject player;
     public int signals;
     public int signals_to_spawn = 1;
+    public bool enemys_to_player;
     private void FixedUpdate()
     {
        if (signals >= signals_to_spawn)
@@ -33,7 +34,7 @@ public class Spawn_in_Room : MonoBehaviour
         {
             if (enemys[i] !=null)
             {
-                if (enemys[i].GetComponentInChildren<Zombie>() != null)
+                if (enemys[i].GetComponentInChildren<Zombie>() != null  && enemys_to_player)
                 {
                     enemys[i].GetComponentInChildren<Zombie>().Target = player;
                 }

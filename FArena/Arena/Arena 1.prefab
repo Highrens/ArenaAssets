@@ -424,6 +424,7 @@ MonoBehaviour:
   - {fileID: 85545568291643930}
   signals: 0
   signals_to_spawn: 1
+  enemys_to_player: 0
 --- !u!65 &3903276902748871224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -840,6 +841,7 @@ MonoBehaviour:
   - {fileID: 7446840612328557417}
   signals: 0
   signals_to_spawn: 1
+  enemys_to_player: 0
 --- !u!65 &5261861050890521918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2796,7 +2798,7 @@ GameObject:
   - component: {fileID: 7962892917642882284}
   - component: {fileID: 1377305510904644176}
   m_Layer: 0
-  m_Name: Arena  1
+  m_Name: Arena 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4026,6 +4028,7 @@ MonoBehaviour:
   - {fileID: 5052136397647594203}
   signals: 0
   signals_to_spawn: 1
+  enemys_to_player: 0
 --- !u!65 &5881116632534468329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4095,6 +4098,7 @@ MonoBehaviour:
   - {fileID: 8320811499165027085}
   signals: 0
   signals_to_spawn: 1
+  enemys_to_player: 0
 --- !u!65 &1692032688924015901
 BoxCollider:
   m_ObjectHideFlags: 0

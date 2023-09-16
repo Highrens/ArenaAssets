@@ -1253,7 +1253,7 @@ GameObject:
   - component: {fileID: 6891319921765922852}
   - component: {fileID: 2467460286770386584}
   m_Layer: 0
-  m_Name: Arena 5 1
+  m_Name: Arena 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7903,6 +7903,7 @@ MonoBehaviour:
   - {fileID: 3960929522781258029}
   signals: 0
   signals_to_spawn: 1
+  enemys_to_player: 0
 --- !u!65 &2763042872010205653
 BoxCollider:
   m_ObjectHideFlags: 0

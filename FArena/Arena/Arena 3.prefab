@@ -944,7 +944,7 @@ GameObject:
   - component: {fileID: 6358307521426748738}
   - component: {fileID: 2711716710073687038}
   m_Layer: 0
-  m_Name: Arena  3
+  m_Name: Arena 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38172,6 +38172,7 @@ MonoBehaviour:
   - {fileID: 7382501401043270128}
   signals: 0
   signals_to_spawn: 1
+  enemys_to_player: 0
 --- !u!65 &2434073757156648115
 BoxCollider:
   m_ObjectHideFlags: 0
