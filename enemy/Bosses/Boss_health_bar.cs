@@ -9,14 +9,14 @@ public class Boss_health_bar : MonoBehaviour
     public Slider BossHealth_slider;
     public Enemy_Health health;
     public GameObject health_obj;
-           bool  maximize_health = true;
+    bool maximize_health = true;
     public GameObject player;
-    string[,] achiv;
     public int NumberAchivement;
     // Start is called before the first frame update
     // Update is called once per frame
     void Update()
     {
+        if (!health) return;
         if (maximize_health == true)
         {
             health.Enemys_health = health.Enemys_Max_health;
@@ -30,7 +30,7 @@ public class Boss_health_bar : MonoBehaviour
             BossHealth_slider.value = health.Enemys_health / health.Enemys_Max_health;
         }
     }
-     void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == 8)
         {
@@ -38,7 +38,7 @@ public class Boss_health_bar : MonoBehaviour
             Start_fight = true;
         }
     }
-   public  void TakeAchivement()
+    public void TakeAchivement()
     {
         player.GetComponentInChildren<SimpleAchivement>().ShowAndSaveAchivement(NumberAchivement);
     }

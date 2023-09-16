@@ -6,17 +6,14 @@ public class LightWay : MonoBehaviour
 {
     public GameObject on;
     public GameObject off;
-    public bool state = false;
+    public bool state;
 
-    // Update is called once per frame
-    void Update()
+
+   public void ChangeState()
     {
-        if (state)  {
-            on.SetActive(true);
-            off.SetActive(false);
-        } else {
-            on.SetActive(false);
-            off.SetActive(true);
-        }
+        state = !state;
+        if (on) on.SetActive(state);
+        if (off) off.SetActive(!state);
     }
+
 }

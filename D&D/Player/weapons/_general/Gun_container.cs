@@ -10,6 +10,7 @@ public class Gun_container : MonoBehaviour
     public bool needToUnlock;
     public string GunName = "Missing Name";
     public string GunDiscription = "Missing Discripton";
+    
     public bool ReturnIsGunAlreadyUnlock()
     {
         GetComponent<Achivements>().GetAchivements();

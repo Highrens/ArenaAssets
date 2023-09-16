@@ -5,7 +5,7 @@ using UnityEngine;
 public class ArenaAchivements : MonoBehaviour
 {
     Arena arena;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,8 +13,9 @@ public class ArenaAchivements : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
+
         if (arena.waveNumber == 10)
         {
             arena.player.GetComponentInChildren<SimpleAchivement>().ShowAndSaveAchivement(7);

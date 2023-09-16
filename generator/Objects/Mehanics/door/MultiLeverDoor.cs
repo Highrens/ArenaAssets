@@ -10,7 +10,11 @@ public class MultiLeverDoor : MonoBehaviour
     public void ChangeState()
     {
         GetComponentInParent<Animator>()?.SetBool("Open", signals == Levers);
-        if (signals == Levers) GetComponent<AudioSource>()?.Play();
+        if (signals == Levers) {
+            if (GetComponent<AudioSource>()) {
+                GetComponent<AudioSource>().Play();
+            }
+        }
         
     }
 }

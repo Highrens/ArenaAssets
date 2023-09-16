@@ -16,7 +16,7 @@ public class SimpleAchivement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (GetComponentInParent<InterFace>().gameIsPaused) return;
 

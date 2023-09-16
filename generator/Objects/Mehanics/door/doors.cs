@@ -16,14 +16,15 @@ public class doors : MonoBehaviour
     // Update is called once per frame
     public void ChangeState()
     {
-        
-            if (GetComponentInParent<Animator>().GetBool("Open"))
+        if (door_is_locked) return;
+        Debug.Log("open") ;  
+            if (GetComponent<Animator>().GetBool("Open"))
             {
-                GetComponentInParent<Animator>().SetBool("Open", false);
+                GetComponent<Animator>().SetBool("Open", false);
             } 
             else
             {
-                GetComponentInParent<Animator>().SetBool("Open", true);
+                GetComponent<Animator>().SetBool("Open", true);
             }   
     }
 }

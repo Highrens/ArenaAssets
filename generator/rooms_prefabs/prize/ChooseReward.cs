@@ -8,11 +8,11 @@ public class ChooseReward : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        // Уничтожаем заблокированное оружие
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         for (int i = transform.childCount; i > 0; i--)
         {
             Transform UnclockDestroy = gameObject.transform.GetChild(i-1);
-            if (UnclockDestroy.gameObject.GetComponent<Gun_container>() != null && UnclockDestroy.gameObject.GetComponent<Gun_container>().ReturnIsGunAlreadyUnlock() == false)
+            if (UnclockDestroy.gameObject.GetComponent<Gun_container>()?.ReturnIsGunAlreadyUnlock() == false)
             {
                 DestroyImmediate(UnclockDestroy.gameObject);
             }

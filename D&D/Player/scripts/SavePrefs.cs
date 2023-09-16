@@ -57,7 +57,7 @@ public class SavePrefs : MonoBehaviour
                 }
                 guns.currentWeapons[0] = guns.allWeapons[PlayerPrefs.GetInt("FirstWeapon")];
                 guns.currentWeapons[0].SetActive(true);
-                guns.currentWeapons[1] = guns.allWeapons[PlayerPrefs.GetInt("SecondWeapon")];
+                if (PlayerPrefs.HasKey("SecondWeapon")) guns.currentWeapons[1] = guns.allWeapons[PlayerPrefs.GetInt("SecondWeapon")];
                 // guns.currentWeapons[2] = guns.allWeapons[PlayerPrefs.GetInt("ThirdWeapon")];
             }
       //  }

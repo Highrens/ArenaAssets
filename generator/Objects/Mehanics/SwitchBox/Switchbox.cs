@@ -32,6 +32,7 @@ public class Switchbox : MonoBehaviour
     // Update is called once per frame
     public void ChangeLight()
     {
+        isDark = !isDark;
         anim.SetTrigger("change");
         if (isDark)
         {
@@ -39,7 +40,7 @@ public class Switchbox : MonoBehaviour
             foreach (GameObject ObjLight in filtredObj)
             {
                 if (!ObjLight) return;
-                ObjLight.GetComponent<LightWay>().state = false;
+                ObjLight.GetComponent<LightWay>().ChangeState();
 
             }
             foreach (GameObject ObjLight in filtredLightObj)

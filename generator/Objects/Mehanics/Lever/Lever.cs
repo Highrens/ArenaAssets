@@ -5,7 +5,7 @@ using UnityEngine;
 public class Lever : MonoBehaviour
 {
     public GameObject[] Target;
-    public AudioSource AS;
+     AudioSource AS;
     bool t = true;
     Animator Anim;
     // Start is called before the first frame update
@@ -18,44 +18,34 @@ public class Lever : MonoBehaviour
     // Update is called once per frame
     public void Interact_with_taget()
     {
-        AS.Play();
+        AS?.Play();
         ChangeState();
-        for (int i = 0; i <= Target.Length-1; i++)
+        for (int i = 0; i <= Target.Length - 1; i++)
         {
             if (Target[i] != null)
             {
-                Target[i].GetComponentInParent<doors>()?.ChangeState();
-                if (Target[i].GetComponentInParent<MultiLeverDoor>())
+                Target[i].GetComponentInChildren<doors>()?.ChangeState();
+                if (Target[i].GetComponentInChildren<MultiLeverDoor>())
                 {
-                    MultiLeverDoor MLD  = Target[i].GetComponent<MultiLeverDoor>();
+                    MultiLeverDoor MLD = Target[i].GetComponentInChildren<MultiLeverDoor>();
                     if (t == true)
                     {
                         MLD.signals += 1;
-                        MLD.ChangeState();
                         t = !t;
                     }
                     else
                     {
                         MLD.signals -= 1;
-                        MLD.ChangeState();
+                        
                         t = !t;
                     }
+                    MLD.ChangeState();
                 }
-                if (Target[i].GetComponentInParent<Spawn_in_Room>() != null)
-                {
-                    Target[i].GetComponent<Spawn_in_Room>().signals += 1;
-                }
-                if (Target[i].GetComponentInParent<Destroy_on_lever>() != null)
-                {
-                    Target[i].GetComponent<Destroy_on_lever>().signals += 1;
-
-                }
-                if (Target[i].GetComponent<LightWay>() != null)
-                {
-                    Target[i].GetComponent<LightWay>().state = !Target[i].GetComponent<LightWay>().state;
-                }
+                if (Target[i].GetComponentInParent<Spawn_in_Room>()) Target[i].GetComponent<Spawn_in_Room>().signals += 1;
+                if (Target[i].GetComponentInParent<Destroy_on_lever>()) Target[i].GetComponent<Destroy_on_lever>().signals += 1;
+                Target[i].GetComponent<LightWay>()?.ChangeState();
                 Target[i].GetComponent<Arena>()?.ArenaStart();
-                if (Target[i].GetComponent<ForwardArena>() != null)
+                if (Target[i].GetComponent<ForwardArena>())
                 {
                     Target[i].GetComponent<ForwardArena>().FDArenaStart();
                     Destroy(gameObject);
@@ -66,11 +56,13 @@ public class Lever : MonoBehaviour
     public void ChangeState()
     {
         if (!Anim) return;
-            if (Anim.GetBool("Open"))
-            {
-                Anim.SetBool("Open", false);
-            } else {
-                Anim.SetBool("Open", true);
-            }
+        if (Anim.GetBool("Open"))
+        {
+            Anim.SetBool("Open", false);
+        }
+        else
+        {
+            Anim.SetBool("Open", true);
+        }
     }
 }

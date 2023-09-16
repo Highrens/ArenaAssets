@@ -62,7 +62,7 @@ public class Main_menu : MonoBehaviour
     {
         PlayerPrefs.SetInt("FirstWeapon", 0);
         //PlayerPrefs.SetInt("SecondWeapon", 3);
-        curretSecondWeapon.sprite = gunSwitch.allWeapons[3].GetComponent<pistol_n>().icon;
+        curretSecondWeapon.sprite = null;
         curretFirstWeapon.sprite = gunSwitch.allWeapons[0].GetComponent<pistol_n>().icon;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

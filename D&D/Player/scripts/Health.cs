@@ -25,14 +25,22 @@ public class Health : MonoBehaviour
     public int armor;
     public int armor_max = 100;
     public bool isRunning;
-    // Update is called once per frame
-    void Update()
+    
+    public void FixedUpdate()
     {
         bars[0].value = Player_health / Health_max;
         health_txt.text = Player_health.ToString();
         bars[1].value = stamina / 100f;
         bars[2].value = armor / 100f;
 
+        if (stamina >= 100) { bars[1].gameObject.SetActive(false); }
+        else { bars[1].gameObject.SetActive(true); }
+        if (armor <= 0) { bars[2].gameObject.SetActive(false); }
+        else { bars[2].gameObject.SetActive(true); }
+    }
+
+    void Update()
+    {
         t += Time.deltaTime;
         damageTimer += Time.deltaTime;
 
@@ -44,10 +52,9 @@ public class Health : MonoBehaviour
 
         if (Player_health <= 0) Death();
 
-        if (Input.GetButton("Sprint") && stamina > 0 &&
-            Input.GetAxis("Vertical") > 0
-            // GetComponent<SC_FPSController>().moveDirection.x > 0 &&
-            // GetComponent<SC_FPSController>().moveDirection.y != 0 
+        if (Input.GetButton("Sprint")
+        && stamina > 0
+        && Input.GetAxis("Vertical") > 0
             && gameObject.GetComponent<CharacterController>() != null)
         {
             if (GetComponentInChildren<pistol_n>())
@@ -70,20 +77,17 @@ public class Health : MonoBehaviour
             stamina += 3 * Time.deltaTime;
 
         }
-        if (stamina >= 100) { bars[1].gameObject.SetActive(false); }
-        else { bars[1].gameObject.SetActive(true); }
-        if (armor <= 0) { bars[2].gameObject.SetActive(false); }
-        else { bars[2].gameObject.SetActive(true); }
     }
+
     public void TakeDamage(int damage)
     {
         Player_health -= damage;
         damageScreen.SetActive(true);
     }
+
     void Death()
     {
         damageScreen.SetActive(false);
-        //Time.timeScale = 0f;
         Destroy(gameObject.GetComponent<SC_FPSController>());
         Destroy(gameObject.GetComponent<CharacterController>());
         Destroy(Cam);
@@ -96,5 +100,10 @@ public class Health : MonoBehaviour
         isRunning = true;
         stamina -= stamina_cost;
         t = 0;
+    }
+    public void AddShield(int ArmorAmount)
+    {
+        armor += ArmorAmount;
+        if (armor > armor_max) armor_max = armor;
     }
 }

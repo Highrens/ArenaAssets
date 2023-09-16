@@ -1229,7 +1229,7 @@ MonoBehaviour:
   currentWeapon: 0
   currentWeapons:
   - {fileID: 808492191352997603}
-  - {fileID: 808492190790897976}
+  - {fileID: 0}
   - {fileID: 808492190959281613}
   - {fileID: 0}
   allWeapons:

@@ -56,28 +56,25 @@ public class interact : MonoBehaviour
         {
             if (Hit.transform.GetComponentInParent<doors>() != null)
             {
-                if (Hit.transform.GetComponentInParent<doors>().door_is_locked == true)
+                doors door = Hit.transform.GetComponentInParent<doors>();
+                if (door.door_is_locked == true && inv.keys > 0)
                 {
-
-                    if (inv.keys > 0)
-                    {
-                        inv.keys -= 1;
-                        Hit.transform.GetComponentInParent<doors>().door_is_locked = false;
-                        Hit.transform.GetComponentInParent<doors>().ChangeState();
-                    }
+                    inv.keys -= 1;
+                    door.door_is_locked = false;
+                    door.ChangeState();
                 }
                 else
                 {
-                    Hit.transform.GetComponentInParent<doors>().ChangeState();
+                    door.ChangeState();
                 }
             }
             if (Hit.transform.GetComponentInParent<Pickups>() != null)
             {
-
-                inv.keys += Hit.transform.GetComponent<Pickups>().keys;
-                inv.Health_Potion += Hit.transform.GetComponent<Pickups>().Health_Potion;
-                inv.Stamina_Potion += Hit.transform.GetComponent<Pickups>().Stamina_Potion;
-                inv.Coins += Hit.transform.GetComponent<Pickups>().Coins;
+                Pickups pickups = Hit.transform.GetComponent<Pickups>();
+                inv.keys += pickups.keys;
+                inv.Health_Potion += pickups.Health_Potion;
+                inv.Stamina_Potion += pickups.Stamina_Potion;
+                inv.Coins += pickups.Coins;
                 Destroy(Hit.transform.gameObject);
             }
             if (Hit.transform.GetComponentInParent<AmmoScript>() != null)
@@ -91,24 +88,7 @@ public class interact : MonoBehaviour
 
                 Destroy(Hit.transform.gameObject);
             }
-            if (Hit.transform.GetComponentInParent<Lever>() != null)
-            {
-                Hit.transform.GetComponentInParent<Lever>().Interact_with_taget();
-            }
-            if (Hit.transform.GetComponentInParent<shield>() != null)
-            {
-                GetComponentInParent<Health>().armor += Hit.transform.GetComponentInParent<shield>().armor;
-                if (GetComponentInParent<Health>().armor < 0)
-                {
-                    GetComponentInParent<Health>().armor = 0;
-                }
-                if (GetComponentInParent<Health>().armor > GetComponentInParent<Health>().armor_max)
-                {
-                    GetComponentInParent<Health>().armor = 100;
-                }
-
-                Destroy(Hit.transform.gameObject);
-            }
+            Hit.transform.GetComponent<Lever>()?.Interact_with_taget();
             if (Hit.transform.GetComponentInParent<Gun_container>() != null)
             {
                 GunSwitch gun = GetComponentInChildren<GunSwitch>();
@@ -130,11 +110,6 @@ public class interact : MonoBehaviour
                 {
                     gun.currentWeapons[1] = gun.allWeapons[newGun.gun];
                     gun.ChooseWeapon(1);
-                }
-                else if (gun.currentWeapons[2] == null)
-                {
-                    gun.currentWeapons[2] = gun.allWeapons[newGun.gun];
-                    gun.ChooseWeapon(2);
                 }
                 else
                 {
@@ -190,15 +165,11 @@ public class interact : MonoBehaviour
                         ach.transform.gameObject.GetComponent<SimpleAchivement>().ShowAndSaveAchivement(item.AchivementNumber);
                         ach.achiv[item.AchivementNumber, 1] = "yes";
                     }
-                    message.ShowMessage(coll.Collectibles[item.CollectableNumber, 0] + " �� " + coll.Collectibles[item.CollectableNumber, 1]
+                    message.ShowMessage(coll.Collectibles[item.CollectableNumber, 0] + " / " + coll.Collectibles[item.CollectableNumber, 1]
                         , ach.achiv[item.AchivementNumber, 0]);
                     PlayerPrefs.SetInt(item.CollectableNumber + " " + item.id, 0);
                 }
                 Destroy(Hit.transform.gameObject);
-            }
-            if (Hit.transform.GetComponent<moveBox>() != null)
-            {
-                Hit.transform.GetComponent<moveBox>().opened = !Hit.transform.GetComponent<moveBox>().opened;
             }
             if (Hit.transform.GetComponent<ItemScriptHandler>())
             {
@@ -207,15 +178,19 @@ public class interact : MonoBehaviour
                 message.ShowMessage(item.itemName, item.Discription);
                 Destroy(Hit.transform.gameObject);
             }
+            if (Hit.transform.GetComponentInParent<shield>())
+            {
+                GetComponentInParent<Health>().AddShield(Hit.transform.GetComponentInParent<shield>().armor);
+                Destroy(Hit.transform.gameObject);
+            }
             if (Hit.transform.GetComponent<Price>())
             {
-                if (Hit.transform.GetComponentInParent<TimeBomb>())
-                {
-                    Hit.transform.GetComponentInParent<TimeBomb>().InsertNumber(Hit.transform.GetComponent<Price>().price);
-                }
+                int price = Hit.transform.GetComponent<Price>().price;
+                Hit.transform.GetComponentInParent<TimeBomb>()?.InsertNumber(price);
+
                 if (Hit.transform.GetComponentInParent<Bank>())
                 {
-                    if (Hit.transform.GetComponent<Price>().price > 0)
+                    if (price > 0)
                     {
                         if (inv.Coins > 0)
                         {
@@ -235,17 +210,24 @@ public class interact : MonoBehaviour
             }
             if (Hit.transform.GetComponent<Switchbox>())
             {
-            Switchbox switchbox =  Hit.transform.GetComponent<Switchbox>();
-            switchbox.isDark = !switchbox.isDark;
-            switchbox.ChangeLight();
+                Switchbox switchbox = Hit.transform.GetComponent<Switchbox>();
+                switchbox.ChangeLight();
             }
-            if (Hit.transform.GetComponent<MouseOpen>()) {
+            if (Hit.transform.GetComponent<MouseOpen>())
+            {
                 MouseOpen obj = Hit.transform.GetComponent<MouseOpen>();
-                if (obj.open) {
+                if (obj.open)
+                {
                     obj.dir = 1;
-                } else {
+                }
+                else
+                {
                     obj.dir = -1;
                 }
+            }
+            if (Hit.transform.GetComponent<moveBox>() != null)
+            {
+                Hit.transform.GetComponent<moveBox>().opened = !Hit.transform.GetComponent<moveBox>().opened;
             }
         }
 

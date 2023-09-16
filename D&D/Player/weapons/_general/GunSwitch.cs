@@ -21,15 +21,10 @@ public class GunSwitch : MonoBehaviour
             ChooseWeapon(0);
 
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2) && currentWeapons[1] != null)
         {
            ChooseWeapon(1);
         }
-        // if (Input.GetKeyDown(KeyCode.Alpha3))
-        // {
-        //     ChooseWeapon(2);
-        // }
-
 
         if (Input.GetKeyDown(KeyCode.Alpha3) && GetComponentInParent<Pickups>().Health_Potion != 0)
         {
@@ -72,10 +67,7 @@ public class GunSwitch : MonoBehaviour
             }
             else
             {
-                if (currentWeapons[i] != null)
-                {
-                    currentWeapons[i].SetActive(false);
-                }                 
+                currentWeapons[i]?.SetActive(false);                 
             }
         }
     }

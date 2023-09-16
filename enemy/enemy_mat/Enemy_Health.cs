@@ -31,7 +31,7 @@ public class Enemy_Health : MonoBehaviour
                     if (controlled_Door[i] != null)
                     {
                         
-                        MultiLeverDoor MLD  = controlled_Door[i].GetComponent<MultiLeverDoor>();
+                        MultiLeverDoor MLD  = controlled_Door[i].GetComponentInChildren<MultiLeverDoor>();
                         MLD.GetComponent<MultiLeverDoor>().signals += 1;
                         MLD.ChangeState();
                     }                
