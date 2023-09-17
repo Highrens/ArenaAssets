@@ -2156,7 +2156,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: b312b053c20474241aefd7639c819123, type: 3}
   item: {fileID: 6125772167981416726, guid: e81e93aa632c44f4b8611b1aea6b3267, type: 3}
   shot_dot: {fileID: 574559202133146897}
-  Spread: 0.04
+  accuracy: 66.7
   time_to_shot: 0.05
   damage: 24
   mobility: 90
@@ -6611,7 +6611,7 @@ MonoBehaviour:
   damage: 0
   recoilX: -0.2
   recoilY: -0.2
-  spread: 0.03
+  spread: -10
   shotPoint: {fileID: 6203317280794776925}
   ShotPs: {fileID: 0}
   mobility: 3
@@ -15712,7 +15712,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 34489e79a68cbf842b2af5614862f1eb, type: 3}
   item: {fileID: 2072716354355429778, guid: dee0c5df088c8c24eb8490dc019215c5, type: 3}
   shot_dot: {fileID: 6203317280172497104}
-  Spread: 0.045
+  accuracy: 100
   time_to_shot: 0.08
   damage: 300
   mobility: 100
@@ -16666,7 +16666,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: a7b426df10ef5d04b90e5444cc5ad1cc, type: 3}
   item: {fileID: 2313484215305985456, guid: 5de706dced8ff4a4fbfc4b19d51494db, type: 3}
   shot_dot: {fileID: 71522949702095120}
-  Spread: 0.09
+  accuracy: 88
   time_to_shot: 0.08
   damage: 30
   mobility: 90
@@ -22008,7 +22008,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: a03329171e57c7049b6acaf4b59bf3d5, type: 3}
   item: {fileID: 893893584898970981, guid: ca8cf5aa98525a64fb56cd3adc492279, type: 3}
   shot_dot: {fileID: 6203317281104946971}
-  Spread: 0
+  accuracy: 97.6
   time_to_shot: 1
   damage: 250
   mobility: 80
@@ -23344,7 +23344,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 34489e79a68cbf842b2af5614862f1eb, type: 3}
   item: {fileID: 2649753755020202411, guid: e63faed8361b0cc4d90e96601d5921d2, type: 3}
   shot_dot: {fileID: 3470802121643743759}
-  Spread: 0.09
+  accuracy: 88
   time_to_shot: 0.08
   damage: 30
   mobility: 90
@@ -26464,7 +26464,7 @@ MonoBehaviour:
   damage: 0
   recoilX: 0.2
   recoilY: 0.2
-  spread: -0.02
+  spread: 10
   shotPoint: {fileID: 6203317281510281285}
   ShotPs: {fileID: 0}
   mobility: -3
@@ -26610,7 +26610,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 320cd43a4a3abd249818c59f01e2007e, type: 3}
   item: {fileID: 2983882907505059782, guid: f58137b5b9f69244ebde0d2cda6eafb5, type: 3}
   shot_dot: {fileID: 8558280069740950079}
-  Spread: 0
+  accuracy: 100
   time_to_shot: 1.25
   damage: 550
   mobility: 65
@@ -27256,7 +27256,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 5639616944541e7498bd292b78abf66d, type: 3}
   item: {fileID: 1274329066889372703, guid: 5d4ac8102d7ee07468e9276dae3fcd5e, type: 3}
   shot_dot: {fileID: 0}
-  Spread: 0.03
+  accuracy: 75.6
   time_to_shot: 0.1
   damage: 45
   mobility: 82
@@ -27916,7 +27916,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 771a4a928f1f2014d8327831955c1598, type: 3}
   item: {fileID: 8795530097461980997, guid: c84b2cfa73ce4174eb3f6f9bb176da68, type: 3}
   shot_dot: {fileID: 6203317279677291314}
-  Spread: 0.015
+  accuracy: 84.7
   time_to_shot: 0.1
   damage: 100
   mobility: 80
@@ -28383,7 +28383,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: c72ebf623349d6347a8a920b0fa522e3, type: 3}
   item: {fileID: 5160452949437465829, guid: 5b7110b32a76c984894a0f180cce7d55, type: 3}
   shot_dot: {fileID: 8558280070430614045}
-  Spread: 0.02
+  accuracy: 88
   time_to_shot: 0.1
   damage: 105
   mobility: 78
@@ -28851,14 +28851,14 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: cb384aad3122cb543ae2c7fab603ead9, type: 3}
   item: {fileID: 2251980891763986036, guid: a0e72ad71e292ab4cac26949504ed77b, type: 3}
   shot_dot: {fileID: 6203317280705763209}
-  Spread: 0.09
+  accuracy: 64
   time_to_shot: 0.6
   damage: 25
   mobility: 85
   shotAmount: 8
   IsGunAutomatic: 0
   reload_time: 0.7
-  second_reload_time: 0
+  second_reload_time: 0.7
   reload_by_one: 1
   zoom: 0
   reloading: 0
@@ -29449,10 +29449,10 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: d3d14148f0572b94181a5ae764395551, type: 3}
   item: {fileID: 1676043019539068328, guid: 09dd804a6f1144448971329de5ffadbd, type: 3}
   shot_dot: {fileID: 574559201463612241}
-  Spread: 0.03
+  accuracy: 85.5
   time_to_shot: 0.15
   damage: 50
-  mobility: 93
+  mobility: 87
   shotAmount: 1
   IsGunAutomatic: 0
   reload_time: 2
@@ -29973,7 +29973,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: eefce8bd65b1bce448f41fd6f8ca15aa, type: 3}
   item: {fileID: 1818165815962369553, guid: 6243b54f26f1e494ebe8702c230cff81, type: 3}
   shot_dot: {fileID: 6203317280533540208}
-  Spread: 0.11
+  accuracy: 70.1
   time_to_shot: 0.2
   damage: 12
   mobility: 89
@@ -30127,7 +30127,7 @@ MonoBehaviour:
   PS_obj: {fileID: 180765463032455226, guid: 9112be29e254ea34a9cbbc14b8dc6a0a, type: 3}
   item: {fileID: 2879098515396354481, guid: c66b3c5d86275fa43b111ff98812d221, type: 3}
   shot_dot: {fileID: 6203317281244048731}
-  Spread: 0.02
+  accuracy: 82.3
   time_to_shot: 0.12
   damage: 35
   mobility: 95
@@ -30598,7 +30598,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: c5422cc5b34894b43981b0bf81b22397, type: 3}
   item: {fileID: 8280364926460677439, guid: 5ff86310c5f4bda48939b076b08d7290, type: 3}
   shot_dot: {fileID: 574559202369194799}
-  Spread: 0.01
+  accuracy: 92.7
   time_to_shot: 0.6
   damage: 200
   mobility: 86
@@ -31649,7 +31649,7 @@ MonoBehaviour:
   PS_obj: {fileID: 6821062832853633880, guid: dc92ab94e03e4db4b9069a8689147a2d, type: 3}
   item: {fileID: 6368677181788945378, guid: 19e79e87dd74fa04a952361876bf16c3, type: 3}
   shot_dot: {fileID: 574559201231574506}
-  Spread: 0.01
+  accuracy: 100
   time_to_shot: 0.02
   damage: 50
   mobility: 99
@@ -32195,7 +32195,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: e604a60af726169489ed77e5f83c76e0, type: 3}
   item: {fileID: 719142681360935151, guid: 988032926a4dc2447833ebc03c0b0f86, type: 3}
   shot_dot: {fileID: 6203317279850091567}
-  Spread: 0.09
+  accuracy: 70.9
   time_to_shot: 0.25
   damage: 25
   mobility: 87
@@ -32673,7 +32673,7 @@ MonoBehaviour:
   PS_obj: {fileID: 8541484602801402657, guid: 6240276cb28b14646b2843dcb051ee05, type: 3}
   item: {fileID: 5891187542121565535, guid: 9e610bbeca867144dbdea36173e5c547, type: 3}
   shot_dot: {fileID: 574559201220608979}
-  Spread: 0.01
+  accuracy: 100
   time_to_shot: 0.3
   damage: 150
   mobility: 83
@@ -33271,7 +33271,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: d3d14148f0572b94181a5ae764395551, type: 3}
   item: {fileID: 6368677181788945378, guid: 9ffc971fcc9a5d446bc420003b3206c2, type: 3}
   shot_dot: {fileID: 3526959009928873821}
-  Spread: 0.04
+  accuracy: 90
   time_to_shot: 0.15
   damage: 35
   mobility: 100
@@ -33453,7 +33453,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 5639616944541e7498bd292b78abf66d, type: 3}
   item: {fileID: 3539715439510345018, guid: b9c4b83cb8dc65742b3a65ad665682e9, type: 3}
   shot_dot: {fileID: 7125469812469426306}
-  Spread: 0.025
+  accuracy: 75
   time_to_shot: 0.1
   damage: 30
   mobility: 82
@@ -33792,6 +33792,10 @@ PrefabInstance:
     - target: {fileID: 5700630865638529830, guid: 6713740764842e64d8131b1a5021f415, type: 3}
       propertyPath: Spread
       value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700630865638529830, guid: 6713740764842e64d8131b1a5021f415, type: 3}
+      propertyPath: accuracy
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 5700630865638529830, guid: 6713740764842e64d8131b1a5021f415, type: 3}
       propertyPath: ammoType
@@ -34249,7 +34253,7 @@ MonoBehaviour:
   PS_obj: {fileID: 5980311376640923644, guid: 8efe18edc840f2f4887d79875f4e14ed, type: 3}
   item: {fileID: 3796915008746757617, guid: bd84fc60ff643d941b99f9ace2bd3166, type: 3}
   shot_dot: {fileID: 6203317279821071573}
-  Spread: 0.06
+  accuracy: 77
   time_to_shot: 0.12
   damage: 35
   mobility: 95
@@ -34513,7 +34517,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 4731944b736923642aced85e58194fa3, type: 3}
   item: {fileID: 775997891111791989, guid: 770434d8035448744bcafe36add9268a, type: 3}
   shot_dot: {fileID: 8558280070680643679}
-  Spread: 0.06
+  accuracy: 70
   time_to_shot: 0.075
   damage: 33
   mobility: 89
@@ -34953,7 +34957,7 @@ MonoBehaviour:
   PS_obj: {fileID: 5980311376640923644, guid: 8efe18edc840f2f4887d79875f4e14ed, type: 3}
   item: {fileID: 8150531616213143943, guid: 006c0d73305c30a4db8b9f75dae9ada8, type: 3}
   shot_dot: {fileID: 6203317279642182717}
-  Spread: 0
+  accuracy: 100
   time_to_shot: 0.2
   damage: 2000
   mobility: 100
@@ -35228,7 +35232,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 5639616944541e7498bd292b78abf66d, type: 3}
   item: {fileID: 8605799817513776490, guid: 703955654ef93b24d84b998ca1436e12, type: 3}
   shot_dot: {fileID: 8558280070288877563}
-  Spread: 0.047
+  accuracy: 67
   time_to_shot: 0.075
   damage: 45
   mobility: 90
@@ -35788,7 +35792,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 2caf334b54ba2d74686b073a5b530b62, type: 3}
   item: {fileID: 2129289249434542194, guid: 4d0db63a97f64e34cbd42cf93f077bea, type: 3}
   shot_dot: {fileID: 6203317281015587643}
-  Spread: 0.03
+  accuracy: 92
   time_to_shot: 0.2
   damage: 150
   mobility: 91
@@ -35964,7 +35968,7 @@ MonoBehaviour:
   PS_obj: {fileID: 5773459662021058263, guid: a40faaae18774ee4a9557030bbf5e538, type: 3}
   item: {fileID: 2751771291993075039, guid: 59791967b8c2e7545bdf4899880b0dd4, type: 3}
   shot_dot: {fileID: 845935841538131662}
-  Spread: 0
+  accuracy: 0
   time_to_shot: 0
   damage: 0
   mobility: 66
@@ -36487,7 +36491,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: 5f31cac8a4706e74e9aca55d17e4ddad, type: 3}
   item: {fileID: 6709785790171185267, guid: 5fba6fbe0069ecb4fb5f7284f2b9a5a0, type: 3}
   shot_dot: {fileID: 4360647285308725393}
-  Spread: 0.03
+  accuracy: 77.4
   time_to_shot: 0.15
   damage: 250
   mobility: 85
@@ -37251,7 +37255,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: d3d14148f0572b94181a5ae764395551, type: 3}
   item: {fileID: 8593323385534533430, guid: 5f25dab4503e253458b21d7af0b3a882, type: 3}
   shot_dot: {fileID: 8558280069749001908}
-  Spread: 0.03
+  accuracy: 78.2
   time_to_shot: 0.1
   damage: 50
   mobility: 90
@@ -37784,7 +37788,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: e604a60af726169489ed77e5f83c76e0, type: 3}
   item: {fileID: 3553150316145004025, guid: 4508aaf3cffb38249930070b5fddd1f5, type: 3}
   shot_dot: {fileID: 1984554443}
-  Spread: 0.07
+  accuracy: 70
   time_to_shot: 0.125
   damage: 25
   mobility: 74
@@ -38251,7 +38255,7 @@ MonoBehaviour:
   PS_obj: {fileID: 180765463032455226, guid: 3fe22bb7279f979429d2b5c76d3746c1, type: 3}
   item: {fileID: 5643803229730967314, guid: 4e2c23f4a281ace4389036cc1e3edbde, type: 3}
   shot_dot: {fileID: 1529732192}
-  Spread: 0
+  accuracy: 70
   time_to_shot: 0.3
   damage: 65
   mobility: 80
@@ -38743,7 +38747,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: eefce8bd65b1bce448f41fd6f8ca15aa, type: 3}
   item: {fileID: 3256064816271115614, guid: 1bd4a75c479e76e4f8d93c240308f709, type: 3}
   shot_dot: {fileID: 75110605}
-  Spread: 0.1
+  accuracy: 70
   time_to_shot: 0.125
   damage: 20
   mobility: 78
@@ -38914,7 +38918,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: c5422cc5b34894b43981b0bf81b22397, type: 3}
   item: {fileID: 2016202941475938998, guid: cab5c78e8ba95394aa396e29ffe78843, type: 3}
   shot_dot: {fileID: 1537846484}
-  Spread: 0.01
+  accuracy: 70
   time_to_shot: 0.6
   damage: 200
   mobility: 80
@@ -39146,9 +39150,9 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: d3d14148f0572b94181a5ae764395551, type: 3}
   item: {fileID: 7437485801729822016, guid: e16a85c6affed974082f40025ee4aa55, type: 3}
   shot_dot: {fileID: 763801512}
-  Spread: 0.03
+  accuracy: 100
   time_to_shot: 0.15
-  damage: 50
+  damage: 75
   mobility: 96
   shotAmount: 1
   IsGunAutomatic: 0
@@ -39650,7 +39654,7 @@ MonoBehaviour:
   PS_obj: {fileID: 180765463032455226, guid: 3843e8a3f5aaa0a47af2deb5db9bb1dc, type: 3}
   item: {fileID: 7366792914524378970, guid: 8d6df3b4552a81042b7c9073e8134051, type: 3}
   shot_dot: {fileID: 708528912}
-  Spread: 0.01
+  accuracy: 70
   time_to_shot: 0.3
   damage: 65
   mobility: 100
@@ -39814,7 +39818,7 @@ MonoBehaviour:
   PS_obj: {fileID: 3202677528027382588, guid: d3d14148f0572b94181a5ae764395551, type: 3}
   item: {fileID: 7437485801729822016, guid: e16a85c6affed974082f40025ee4aa55, type: 3}
   shot_dot: {fileID: 8558280069277496066}
-  Spread: 0.03
+  accuracy: 88
   time_to_shot: 0.15
   damage: 50
   mobility: 96

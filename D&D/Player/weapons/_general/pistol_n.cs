@@ -17,7 +17,8 @@ public class pistol_n : MonoBehaviour
     public GameObject item;
     public Transform shot_dot;
 
-    public float Spread;
+    [Range(0, 100)]
+    public float accuracy;
     public float time_to_shot;
     public int damage = 40;
 
@@ -135,8 +136,8 @@ public class pistol_n : MonoBehaviour
 
         for (int i = 0; i < shotAmount; i++)
         {
-
-            Vector3 shotDir = point.transform.TransformDirection(Vector3.forward + new Vector3(Random.Range(-Spread, Spread), Random.Range(-Spread, Spread), 0));
+            float spread = (-accuracy + 100) * 0.002f;
+            Vector3 shotDir = point.transform.TransformDirection(Vector3.forward + new Vector3(Random.Range(-spread, spread), Random.Range(-spread, spread), 0));
 
             if (!lazerType)
             {

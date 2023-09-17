@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScopeItem : MonoBehaviour
+public class TripleBullets : MonoBehaviour
 {
     public Sprite icon;
     void Start()
@@ -13,8 +13,9 @@ public class ScopeItem : MonoBehaviour
         for (int i = 0; i < weapons.Length; i++)
         {
             pistol_n weapon = weapons[i].GetComponentInChildren<pistol_n>();
-
-            weapon.Spread *= 0.75f;
+            weapon.shotAmount *= 3;
+            weapon.accuracy = 15;
+            weapon.time_to_shot *= 1.3f;
         }
         Destroy(gameObject);
     }

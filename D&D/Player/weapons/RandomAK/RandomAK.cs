@@ -17,7 +17,7 @@ public class RandomAK : MonoBehaviour
                 if(Obj != null)
                 {
                     RandomAK.damage += Obj.damage;
-                    RandomAK.Spread += Obj.spread;
+                    RandomAK.accuracy += Obj.spread;
                     RandomAK_recoil.rotationX += Obj.recoilX;
                     RandomAK_recoil.rotationY += Obj.recoilY;
                     RandomAK.mobility += Obj.mobility;

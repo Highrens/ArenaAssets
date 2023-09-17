@@ -14,7 +14,7 @@ public class PlusOneBullet : MonoBehaviour
         {
             pistol_n weapon = weapons[i].GetComponentInChildren<pistol_n>();
             weapon.shotAmount += 1;
-            weapon.Spread *= 1.2f;
+            weapon.accuracy *= .8f;
         }
         Destroy(gameObject);
     }

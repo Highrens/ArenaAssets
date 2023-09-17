@@ -26,7 +26,7 @@ public class SilencerProcess : MonoBehaviour
                 silencerObj.transform.localRotation = Quaternion.Euler(Vector3.zero);
                 weapon.shot_dot = silencerObj.transform.GetChild(0);
                 weapon.PS_obj = silentPS;
-                weapon.Spread *= 0.90f;
+                weapon.accuracy *= 1.1f;
                 Recoil weaponRecoil = weapons[i].GetComponentInChildren<Recoil>();
                 weaponRecoil.rotationX *= 0.9f;
                 weaponRecoil.rotationY *= 0.9f;

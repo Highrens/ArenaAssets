@@ -98,7 +98,7 @@ public class sniper : MonoBehaviour
 
             if (Health_player.armor > 0)
             {
-                Health_player.Player_health -= (Damage * armor_penetration);
+                Health_player.Player_health -= (float)(Damage * armor_penetration);
                 Health_player.armor -= (int)(Damage * armor_penetration);
             }
             else

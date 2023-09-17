@@ -83,7 +83,7 @@ public class input : MonoBehaviour
         {
             if (fall_distance <= -damage_distance)
             {
-                health.Player_health += fall_distance * 6;
+                health.Player_health += (float)fall_distance * 6;
             }
             fall_distance = 0;
         }
