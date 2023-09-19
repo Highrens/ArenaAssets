@@ -6,15 +6,16 @@ using UnityEngine.UI;
 public class Enemy_Health : MonoBehaviour
 {
     public float Enemys_health = 100;
-    public GameObject[] controlled_Door;
     public float Enemys_Max_health;
-    public GameObject Explode;
 
+    public GameObject[] controlled_Door;
+    public GameObject Explode;
     public GameObject Loot;
     [Range(0, 1)]
     public float Chance_no_drop = 0.5f;
     public GameObject arena;
     public int arena_number;
+    public GameObject Player;
     // public Slider health_sl;
     private void Start()
     {
@@ -47,6 +48,7 @@ public class Enemy_Health : MonoBehaviour
             {
                 Instantiate(Explode, transform.position, transform.rotation);
             }
+            GetComponent<KillAchivment>()?.Check(Player);
             GetComponentInParent<Boss_health_bar>()?.TakeAchivement();
             Destroy(gameObject);
         }

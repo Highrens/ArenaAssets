@@ -147,6 +147,7 @@ public class pistol_n : MonoBehaviour
                     if (hit.transform.gameObject.layer == 11 && hit.transform.gameObject.GetComponentInParent<Enemy_Health>() != null)
                     {
                         hit.transform.gameObject.GetComponentInParent<Enemy_Health>().Enemys_health -= damage;
+                        hit.transform.gameObject.GetComponentInParent<Enemy_Health>().Player = transform.root.gameObject;
                     }
                     if (Hit_ps)
                     {
@@ -158,8 +159,10 @@ public class pistol_n : MonoBehaviour
             else
             {
                 var spawnedProj = projectile;
-                spawnedProj.GetComponentInChildren<Projectile_frend>().Damage = damage;
-                spawnedProj.GetComponentInChildren<Projectile_frend>().dir = shotDir;
+                Projectile_frend projectile_f = spawnedProj.GetComponentInChildren<Projectile_frend>();
+                projectile_f.Damage = damage;
+                projectile_f.dir = shotDir;
+                projectile_f.Player = transform.root.gameObject;
                 Instantiate(projectile, shot_dot.position, shot_dot.rotation);
 
             }

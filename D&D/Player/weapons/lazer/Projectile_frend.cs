@@ -10,17 +10,25 @@ public class Projectile_frend : MonoBehaviour
     public Vector3 dir;
     public bool destroyByEnemyTouch = true;
     public bool destroyByObstacles = true;
-    
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
         GetComponent<Rigidbody>().velocity = dir * Speed;
+
+        if (GetComponent<ExplodeOntouch>()?.gameObject.GetComponent<Projectile_frend>())
+        {
+            GetComponent<ExplodeOntouch>().gameObject.GetComponent<Projectile_frend>().Player = Player;
+
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.gameObject.layer == 11 && other.gameObject.GetComponentInParent<Enemy_Health>() != null)
         {
-            other.gameObject.GetComponentInParent<Enemy_Health>().Enemys_health -= Damage;
+            Enemy_Health enemy_Health = other.gameObject.GetComponentInParent<Enemy_Health>();
+            enemy_Health.Enemys_health -= Damage;
+            enemy_Health.Player = Player;
             if (destroyByEnemyTouch)
             {
                 Destroy(gameObject);

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 935392946087787239}
   - component: {fileID: 1069080234250673260}
   - component: {fileID: 2416409927712873628}
+  - component: {fileID: 3451495016791687338}
   m_Layer: 11
   m_Name: Shot_envolve t_enemy
   m_TagString: Untagged
@@ -115,13 +116,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemys_health: 250
-  controlled_Door: []
   Enemys_Max_health: 250
+  controlled_Door: []
   Explode: {fileID: 6170475625676571393, guid: 889e8f6dbcaa9e845b5d77c5ea4290b0, type: 3}
   Loot: {fileID: 9152165525193568532, guid: b4dc1e701d858924b8a0b49188c40543, type: 3}
   Chance_no_drop: 0.425
   arena: {fileID: 0}
   arena_number: 1
+  Player: {fileID: 0}
 --- !u!195 &1069080234250673260
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -157,6 +159,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chance: 20
+--- !u!114 &3451495016791687338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935392946087787237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae135e98db75674b9cd8ee340cdceaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AchivementNumber: 8
+  AchivementAmount: 10
 --- !u!1 &1472153172963421463
 GameObject:
   m_ObjectHideFlags: 0

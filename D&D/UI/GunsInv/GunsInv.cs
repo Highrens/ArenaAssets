@@ -23,18 +23,35 @@ public class GunsInv : MonoBehaviour
       
         bool isMatch = Regex.IsMatch(input, pattern);
 
-        if (isMatch) {
+        if (Regex.IsMatch(input, @"^Give\s.*$")) {
             Debug.Log("match!");
-            for (int i = 0; i < guns.transform.childCount; i++)
+            for (int i = 0; i < guns.allWeapons.Length; i++)
             {
-              if ("give " + guns.transform.GetChild(i).name.ToLower() == inputField.text.ToLower()){
-                guns.transform.GetChild(i).gameObject.SetActive(true);
+              if ("give " + guns.allWeapons[i].name.ToLower() == inputField.text.ToLower()){
+                guns.currentWeapons[guns.currentWeapon] = guns.allWeapons[i];
+                guns.allWeapons[i].SetActive(true);
               }
               else {
-                guns.transform.GetChild(i).gameObject.SetActive(false);
+                guns.allWeapons[i].SetActive(false);
               }
               
             }
+        }
+
+        if (Regex.IsMatch(input, @"^Money (\d+)$")) {
+
+            int number = int.Parse(input[(input.IndexOf(' ') + 1)..]);
+            PlayerPrefs.SetInt("MoneyInBank", number);
+        }
+        if (Regex.IsMatch(input, @"^Coins (\d+)$")) {
+
+            int number = int.Parse(input[(input.IndexOf(' ') + 1)..]);
+            transform.root.GetComponentInChildren<Pickups>().Coins = number;
+        }
+        if (Regex.IsMatch(input, @"^Hpotion (\d+)$")) {
+
+            int number = int.Parse(input[(input.IndexOf(' ') + 1)..]);
+            transform.root.GetComponentInChildren<Pickups>().Health_Potion = number;
         }
         inputField.text = "";
 

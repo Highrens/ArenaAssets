@@ -5,6 +5,7 @@ using JetBrains.Annotations;
 using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SocialPlatforms;
 
 public class ForwardArena : MonoBehaviour
 {
@@ -12,61 +13,55 @@ public class ForwardArena : MonoBehaviour
     public GameObject[] ShopPrefabs;
     public GameObject[] BossesPrefabs;
     public GameObject[] PrizePrefabs;
-    int prizenumber;
+    [Range(0, 1)]
+    public float unicRoomChance;
+    public GameObject[] unicPrefabs;
+    public GameObject Finish;
+    int unicNumber = 0;
+    int prizeNumber;
+    int shopNumber;
     public GameObject previosArena;
     public GameObject nextArena;
-    public Lever lever;
+    //public Lever lever;
     public int roomAmount;
+    int RealRoomAmount;
     private void Start()
     {
-        prizenumber = Random.Range(1, roomAmount - 1);
-        if (prizenumber % 5 == 0)
+        bool willUnicRoomSpawn = unicRoomChance >= Random.value;
+
+        RealRoomAmount = roomAmount + 4; // add space for Prize, Shop, Boss and Finish;
+        if (willUnicRoomSpawn) RealRoomAmount++; // add space for Unic room;
+
+        List<int> uniqueNumbers = new();
+        int maxAttempts = 500;
+        int attempts = 0;
+
+        while (uniqueNumbers.Count < 4 && attempts < maxAttempts)
         {
-            prizenumber--;
+            int randomNumber = Random.Range(1, RealRoomAmount - 2);
+
+            if (!uniqueNumbers.Contains(randomNumber))
+            {
+                uniqueNumbers.Add(randomNumber);
+            }
+
+            attempts++;
         }
-        for (int i = 0; i < roomAmount; i++)
+        prizeNumber = uniqueNumbers[0];
+        shopNumber = uniqueNumbers[1];
+        if (willUnicRoomSpawn) unicNumber = uniqueNumbers[2]; ; // -2 cause last 2 room always Boss and Finish;
+
+        for (int i = 0; i < RealRoomAmount; i++)
         {
             FDArenaStart();
         }
-        
+
     }
 
     async public void FDArenaStart()
     {
-        ForwardArena_Room curretArena = nextArena.GetComponent<ForwardArena_Room>();
 
-        int ArenaNum;
-        GameObject Arena;
-        Debug.Log(curretArena.id % 4);
-
-        if (curretArena.id + 1 == prizenumber)
-        {
-            ArenaNum = Random.Range(0, PrizePrefabs.Length);
-            Arena = Instantiate(PrizePrefabs[ArenaNum],
-                curretArena.EnterToNewArena.position,
-                transform.rotation);
-        }
-        else if (curretArena.id % 4 == 0 && curretArena.id != 0)
-        {
-            ArenaNum = Random.Range(0, ShopPrefabs.Length);
-            Arena = Instantiate(ShopPrefabs[ArenaNum],
-                curretArena.EnterToNewArena.position,
-                transform.rotation);
-        }
-        else if (curretArena.id % 10 == 0 && curretArena.id != 0)
-        {
-            ArenaNum = Random.Range(0, BossesPrefabs.Length);
-            Arena = Instantiate(BossesPrefabs[ArenaNum],
-                curretArena.EnterToNewArena.position,
-                transform.rotation);
-        }
-        else
-        {
-            ArenaNum = Random.Range(0, ArenaPrefabs.Length);
-            Arena = Instantiate(ArenaPrefabs[ArenaNum],
-                curretArena.EnterToNewArena.position,
-                transform.rotation);
-        }
+        GameObject Arena = ChooseAndSpawnNextRoom();
 
         //Destroy(previosArena);
         previosArena.GetComponentInChildren<NavMeshSurface>().RemoveData();
@@ -78,18 +73,55 @@ public class ForwardArena : MonoBehaviour
         ForwardArena_Room FDprevRoom = previosArena.GetComponent<ForwardArena_Room>();
         ForwardArena_Room FDNextRoom = Arena.GetComponent<ForwardArena_Room>();
 
-
-
         //FDprevRoom.back.SetActive(true);
         FDprevRoom.front.SetActive(false);
 
         FDNextRoom.back.SetActive(false);
         FDNextRoom.front.SetActive(true);
         FDNextRoom.id = FDprevRoom.id + 1;
-        FDNextRoom.lever.Target[^1] = gameObject;
+        //FDNextRoom.lever.Target[^1] = gameObject;
         previosArena.GetComponentInChildren<NavMeshSurface>().RemoveData();
-        
+
         await Task.Delay(100);
-       if (FDNextRoom.id == roomAmount) nextArena.GetComponentInChildren<NavMeshSurface>().BuildNavMesh();
+        if (FDNextRoom.id == roomAmount) nextArena.GetComponentInChildren<NavMeshSurface>().BuildNavMesh();
+    }
+
+    GameObject ChooseAndSpawnNextRoom()
+    {
+        ForwardArena_Room curretArena = nextArena.GetComponent<ForwardArena_Room>();
+
+        Vector3 pos = curretArena.EnterToNewArena.position;
+        Quaternion rot = transform.rotation;
+
+        GameObject Arena;
+        int id = curretArena.id + 1;
+
+        if (id == prizeNumber)
+        {
+            Arena = PrizePrefabs[Random.Range(0, PrizePrefabs.Length)];
+        }
+        else if (id == shopNumber)
+        {
+            Arena = ShopPrefabs[Random.Range(0, ShopPrefabs.Length)];
+        }
+        else if (id == unicNumber)
+        {
+            Arena = unicPrefabs[Random.Range(0, unicPrefabs.Length)];
+        }
+        else if (id == RealRoomAmount - 1)
+        {
+            Arena = BossesPrefabs[Random.Range(0, BossesPrefabs.Length)];
+        }
+        else if (id == RealRoomAmount)
+        {
+            Arena = Finish;
+        }
+        else
+        {
+            Arena = ArenaPrefabs[Random.Range(0, ArenaPrefabs.Length)];
+        }
+
+        GameObject SpawnedArena = Instantiate(Arena, pos, rot);
+        return SpawnedArena;
     }
 }

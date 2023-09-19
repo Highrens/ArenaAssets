@@ -521,13 +521,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemys_health: 150
-  controlled_Door: []
   Enemys_Max_health: 150
+  controlled_Door: []
   Explode: {fileID: 6170475625676571393, guid: 889e8f6dbcaa9e845b5d77c5ea4290b0, type: 3}
   Loot: {fileID: 9152165525193568532, guid: b4dc1e701d858924b8a0b49188c40543, type: 3}
   Chance_no_drop: 0.425
   arena: {fileID: 0}
   arena_number: 1
+  Player: {fileID: 0}
 --- !u!195 &6121591359261468460
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -653,6 +654,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4dbf88ec0e42d69498ef09ca01c4acf5, type: 3}
   m_PrefabInstance: {fileID: 598638065198592876}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2680128172769937477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328661583053803069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae135e98db75674b9cd8ee340cdceaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AchivementNumber: 7
+  AchivementAmount: 20
 --- !u!114 &3998953723043297512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,13 +694,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemys_health: 200
-  controlled_Door: []
   Enemys_Max_health: 0
+  controlled_Door: []
   Explode: {fileID: 6170475625676571393, guid: 889e8f6dbcaa9e845b5d77c5ea4290b0, type: 3}
   Loot: {fileID: 0}
   Chance_no_drop: 0.5
   arena: {fileID: 0}
   arena_number: 0
+  Player: {fileID: 0}
 --- !u!4 &1136159842689160327 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4dbf88ec0e42d69498ef09ca01c4acf5, type: 3}

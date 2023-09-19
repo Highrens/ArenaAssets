@@ -14,11 +14,13 @@ public class Drones_boss : MonoBehaviour
     public GameObject head_real;
     public GameObject head_render;
 
-
-
+    public Transform[] spawnPoints;
+    public GameObject[] drone;
+    Enemy_Health enemy_Health;
     // Start is called before the first frame update
     void Start()
     {
+        enemy_Health = GetComponent<Enemy_Health>();
         Anim = GetComponent<Animator>();
         Anim.speed = 0;
     }
@@ -27,7 +29,7 @@ public class Drones_boss : MonoBehaviour
     void Update()
     {
 
-        if (GetComponent<Boss_health_bar>().Start_fight) 
+        if (GetComponent<Boss_health_bar>().Start_fight)
         {
             head_render.SetActive(false);
             head_real.SetActive(true);
@@ -35,28 +37,22 @@ public class Drones_boss : MonoBehaviour
             t += Time.deltaTime;
         }
 
-        if (t >= time_to_attack && !IsAttacking)
+        if (t >= time_to_attack)
         {
-            int r = Random.Range(0, 3);
-            if (r == 0)
+            t = 0;
+            int botsAmount = Random.Range(0, 3);
+            for (int i = 0; i < botsAmount; i++)
             {
-                IsAttacking = true;
-                Anim.SetTrigger("horiz");
-                StartCoroutine(Horizon());
+                Transform spawnpoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+                Instantiate(drone[0], spawnpoint.position, spawnpoint.rotation);
             }
-            else
+            if (enemy_Health.Enemys_health > enemy_Health.Enemys_Max_health / 2) return;
+
+            int GatesAmount = Random.Range(0, 5);
+            for (int i = 0; i < GatesAmount; i++)
             {
-                Anim.SetTrigger("drones_down");
-                if (r == 1)
-                {
-                    IsAttacking = true;
-                    StartCoroutine(Drones_down_attack());
-                }
-                else
-                {
-                    IsAttacking = true;
-                    StartCoroutine(Drones_down_cage());
-                }
+                Transform spawnpoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
+                Instantiate(drone[1], spawnpoint.position, spawnpoint.rotation);
             }
         }
     }

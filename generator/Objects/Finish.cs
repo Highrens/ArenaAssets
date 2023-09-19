@@ -10,11 +10,10 @@ public class Finish : MonoBehaviour
     {
         if (other.transform.gameObject.layer == 8)
         {
-            GetComponent<SavePrefs>().LoadGame();
             Win.SetActive(true);
             other.GetComponentInChildren<SimpleAchivement>().ShowAndSaveAchivement(1);
-            GetComponent<SavePrefs>().GameComplite++;
-            GetComponent<SavePrefs>().SaveGame();
+            other.GetComponent<SavePrefs>().GameComplite++;
+            other.GetComponent<SavePrefs>().SaveGame();
         }
        
     }

@@ -4124,6 +4124,7 @@ MonoBehaviour:
   - {fileID: 7661365393329783298}
   signals: 0
   signals_to_spawn: 1
+  enemys_to_player: 0
 --- !u!65 &8591434576331603658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6168,7 +6169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398905346328243176, guid: 59a4d7987655087459bf425782baab9a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18
+      value: -17.339
       objectReference: {fileID: 0}
     - target: {fileID: 1398905346328243176, guid: 59a4d7987655087459bf425782baab9a, type: 3}
       propertyPath: m_LocalPosition.y

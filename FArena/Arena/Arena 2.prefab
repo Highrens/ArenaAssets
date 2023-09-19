@@ -22138,6 +22138,7 @@ MonoBehaviour:
   - {fileID: 1790401738933484387}
   signals: 0
   signals_to_spawn: 1
+  enemys_to_player: 0
 --- !u!65 &8903622665605279033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24878,7 +24879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6472455557805973095, guid: c3488c586a0634146ba721d13b8e6c45, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.7212706
+      value: 4.18
       objectReference: {fileID: 0}
     - target: {fileID: 6472455557805973095, guid: c3488c586a0634146ba721d13b8e6c45, type: 3}
       propertyPath: m_LocalRotation.w
@@ -24907,6 +24908,10 @@ PrefabInstance:
     - target: {fileID: 6472455557805973095, guid: c3488c586a0634146ba721d13b8e6c45, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8394899544803188375, guid: c3488c586a0634146ba721d13b8e6c45, type: 3}
+      propertyPath: m_Radius
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3488c586a0634146ba721d13b8e6c45, type: 3}

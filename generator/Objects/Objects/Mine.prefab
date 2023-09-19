@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5616500279056282988}
   - component: {fileID: 5616500279056282991}
   - component: {fileID: 5616500279056282984}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,6 +116,7 @@ MonoBehaviour:
   - {fileID: 5616500279618341595}
   signals: 0
   signals_to_spawn: 1
+  enemys_to_player: 0
 --- !u!114 &5616500279056282984
 MonoBehaviour:
   m_ObjectHideFlags: 0

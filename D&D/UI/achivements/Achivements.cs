@@ -7,14 +7,14 @@ public class Achivements : MonoBehaviour
    public string[,] achiv =
     {
        {"First Shot (Unlocks: Ak)" , "no"},          //0
-       {"Beat Game for the first time!", "no"},     //1
-       {"Beat DeathCar! (Unlocks: Right glock)", "no"},//2
+       {"Beat Game! (Unlock: Dash)", "no"},     //1
+       {"Beat DeathCar! (Unlock: Right glock)", "no"},//2
        {"Beat Kraken! (Unlocks: AUG)", "no"},        //3     +
        {"Beat Drones! (Unlocks: Volcano)", "no"},  //4       +    
        {"You not suppose to be here! (Unlocks: AutoPistol)" , "no"},       //5
        {"Beat Jsab! (Unlocks: Hyperion)", "no"},  //6        +
-       {"Beat 9 waves (Unlocks: Shield)", "no"},  //7
-       {"Beat 19 waves (Unlocks: Deagle)", "no"},  //8
+       {"Brake 20 hemlets (Unlocks: Shield)", "no"},  //7
+       {"Beat 10 Snipers (Unlocks: Deagle)", "no"},  //8
        {"Big Money! (Unlocks: Dimplomat)", "no"},  //9
     };
     public void Awake ()

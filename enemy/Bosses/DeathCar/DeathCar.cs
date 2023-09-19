@@ -8,6 +8,7 @@ public class DeathCar : MonoBehaviour
 
     float Shot_timer;
     public float Time_Until_next_shot;
+    public float Time_Until_next_shot_Rage;
     public int Chosen_attack;
 
     public Transform Lazer_shot_spawn;
@@ -16,26 +17,32 @@ public class DeathCar : MonoBehaviour
     public GameObject Lazer_Proj;
     public GameObject LazerBeam;
     public GameObject Bomb;
+    public GameObject Mine;
     public ParticleSystem BSRS;
 
-
+    Enemy_Health enemy_Health;
     Animator Anim;
 
     // Start is called before the first frame update
     void Start()
     {
         Anim = GetComponentInChildren<Animator>();
+        enemy_Health = GetComponent<Enemy_Health>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (GetComponent<Boss_health_bar>().Start_fight)
-        {
+        if (!GetComponent<Boss_health_bar>().Start_fight) return;
 
-            Shot_timer += Time.deltaTime;
+        Shot_timer += Time.deltaTime;
+
+        if (enemy_Health.Enemys_health <= enemy_Health.Enemys_Max_health / 8)
+        {
+            Time_Until_next_shot = Time_Until_next_shot_Rage;
         }
+
         if (Shot_timer >= Time_Until_next_shot)
         {
             Chosen_attack = Random.Range(1, 4);
@@ -59,6 +66,7 @@ public class DeathCar : MonoBehaviour
                     Shot_timer = 0;
                 }
             }
+            Instantiate(Mine, Anim.transform.position, Anim.transform.rotation);
         }
 
 

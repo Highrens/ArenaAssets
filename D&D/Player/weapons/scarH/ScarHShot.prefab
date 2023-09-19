@@ -4828,6 +4828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Time_to_destroy: 0.33
+  t: 0
 --- !u!82 &3570964916707596916
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4837,7 +4838,7 @@ AudioSource:
   m_GameObject: {fileID: 3202677528027382588}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c748b84b4cf8a7744be56b3ce328c501, type: 2}
   m_audioClip: {fileID: 8300000, guid: 8edf049b01c7b8841a04bb0481181204, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
