@@ -118,13 +118,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemys_health: 1000
-  controlled_Door: []
   Enemys_Max_health: 1000
+  controlled_Door: []
   Explode: {fileID: 6170475625676571393, guid: 889e8f6dbcaa9e845b5d77c5ea4290b0, type: 3}
   Loot: {fileID: 9152165525193568532, guid: b4dc1e701d858924b8a0b49188c40543, type: 3}
   Chance_no_drop: 0.425
   arena: {fileID: 0}
   arena_number: 1
+  Player: {fileID: 0}
 --- !u!195 &4436953575726861951
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -173,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 4436953575726861951}
-  time_to_move: 3
+  time_to_move: 4
   Max_move_distance: 8
 --- !u!1 &5336604121682400428
 GameObject:
@@ -303,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 7136591521540598848, guid: e7eb97c1a1e3c594a80b14d24f510963, type: 3}
   delay_between_shot: 0.25
-  time_to_shot: 2
+  time_to_shot: 4
 --- !u!82 &3480815842628749671
 AudioSource:
   m_ObjectHideFlags: 0

@@ -146,9 +146,12 @@ public class pistol_n : MonoBehaviour
                 {
                     if (hit.transform.gameObject.layer == 11 && hit.transform.gameObject.GetComponentInParent<Enemy_Health>() != null)
                     {
-                        hit.transform.gameObject.GetComponentInParent<Enemy_Health>().Enemys_health -= damage;
-                        hit.transform.gameObject.GetComponentInParent<Enemy_Health>().Player = transform.root.gameObject;
+                        Enemy_Health enemy_ = hit.transform.gameObject.GetComponentInParent<Enemy_Health>();
+                        enemy_.DealDamageToEnemy(damage);
+                        enemy_.Player = transform.root.gameObject;
                     }
+                    //hit.transform.gameObject.GetComponentInParent<DamageTranslate>()?.TraslateDamage(damage);
+                    
                     if (Hit_ps)
                     {
                         var NewHit = Instantiate(Hit_ps, hit.point, Quaternion.Euler(hit.normal * 90));

@@ -63,13 +63,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemys_health: 400
-  controlled_Door: []
   Enemys_Max_health: 0
+  controlled_Door: []
   Explode: {fileID: 6170475625676571393, guid: 889e8f6dbcaa9e845b5d77c5ea4290b0, type: 3}
   Loot: {fileID: 857392060149405046, guid: 2d5dc28fefab49c48adbbbb21b7c8cb0, type: 3}
   Chance_no_drop: 0.425
   arena: {fileID: 0}
   arena_number: 0
+  Player: {fileID: 0}
 --- !u!195 &2349680528596837722
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -131,7 +132,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5560074075355870117}
   m_LocalRotation: {x: -0, y: 0.000000059604645, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.036, z: -0.49066672}
+  m_LocalPosition: {x: 0, y: 0.036, z: 0.169}
   m_LocalScale: {x: 1.1200001, y: 1.12, z: 1.1200001}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -187,7 +188,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5560074075355870117}
-  m_Mesh: {fileID: 4515025964191816251, guid: 4fc2db69c03808442b64257052b654b6, type: 3}
+  m_Mesh: {fileID: -5495902117074765545, guid: 09877061022aad046b1a174bfff8ff0d, type: 3}
 --- !u!1 &6289340499368402089
 GameObject:
   m_ObjectHideFlags: 0

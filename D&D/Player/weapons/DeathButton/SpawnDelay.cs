@@ -16,7 +16,7 @@ public class SpawnDelay : MonoBehaviour
     void Update()
     {
         delay -= Time.deltaTime;
-        if (delay <= 0)
+        if (delay <= 0 && obj)
         {
             obj.SetActive(true);
         }

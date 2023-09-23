@@ -134,6 +134,8 @@ MonoBehaviour:
   dir: {x: 0.7543929, y: 0.15804921, z: 0.64552796}
   destroyByEnemyTouch: 1
   destroyByObstacles: 1
+  Player: {fileID: 0}
+  singleDamage: 1
 --- !u!114 &2836388311770288417
 MonoBehaviour:
   m_ObjectHideFlags: 0

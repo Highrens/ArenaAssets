@@ -89,7 +89,7 @@ Light:
   m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 3e-45, z: 3e-45, w: 6e-45}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -3.37736e+10}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -5071,6 +5071,8 @@ MonoBehaviour:
   dir: {x: 0, y: 0, z: 0}
   destroyByEnemyTouch: 0
   destroyByObstacles: 0
+  Player: {fileID: 0}
+  singleDamage: 1
 --- !u!54 &2276997756041121517
 Rigidbody:
   m_ObjectHideFlags: 0

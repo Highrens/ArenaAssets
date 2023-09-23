@@ -5056,6 +5056,8 @@ MonoBehaviour:
   dir: {x: -0.99021405, y: -0.07293774, z: -0.11931205}
   destroyByEnemyTouch: 1
   destroyByObstacles: 1
+  Player: {fileID: 0}
+  singleDamage: 1
 --- !u!82 &6456297000407543160
 AudioSource:
   m_ObjectHideFlags: 0

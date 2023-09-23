@@ -150,7 +150,7 @@ MonoBehaviour:
   bigAmmoIcon: {fileID: 0}
   shotgunAmmo: 0
   shotgunAmmoIcon: {fileID: 0}
-  specialAmmo: 50
+  specialAmmo: 20
   specialAmmoIcon: {fileID: 0}
   buttonAmmo: 0
   buttonAmmoIcon: {fileID: 0}

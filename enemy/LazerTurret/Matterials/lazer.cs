@@ -31,6 +31,7 @@ public class lazer : MonoBehaviour
     void FixedUpdate()
     {
 
+
         if (Y_shot == true)
         { 
             if (Target != null) Y_shot_vector = Target.transform.position.y;
@@ -58,7 +59,7 @@ public class lazer : MonoBehaviour
 
         RaycastHit hit;
         Debug.DrawRay(ShotPoint.position, transform.TransformDirection(Vector3.forward) * Shot_distance, Color.yellow);
-
+        if (!Progectile) return;
         if (timer > TimeToShot)
         {
             move = true;

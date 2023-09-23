@@ -28,7 +28,7 @@ public class Jsab : MonoBehaviour
     void Update()
     {
         if (!boosHealth.Start_fight) return;
-        if (boosHealth.health.Enemys_health > 1000)
+        if (boosHealth.health.Enemys_health > 500)
         {
             Anim.SetTrigger("start");
             Shot_timer += Time.deltaTime;
@@ -55,14 +55,13 @@ public class Jsab : MonoBehaviour
                     StartCoroutine(Attack());
                 }
             }
-            if (boosHealth.health.Enemys_health < boosHealth.health.Enemys_Max_health / 3)
-            {
-                lastStand.SetActive(true);
-            }
+            // if (boosHealth.health.Enemys_health < boosHealth.health.Enemys_Max_health / 3)
+            // {
+            //     lastStand.SetActive(true);
+            // }
         } else {
             lastStand.SetActive(false);
-            SDAF.SetActive(true);
-            jsab_render.SetActive(false);
+            SDAF?.SetActive(true);
         }
 
 

@@ -21,7 +21,7 @@ public class Enemy_Health : MonoBehaviour
     {
         Enemys_Max_health = Enemys_health;
     }
-    void FixedUpdate()
+    void DeadCheck()
     {
 
        // health_sl.value = Enemys_health / 100f;
@@ -52,6 +52,10 @@ public class Enemy_Health : MonoBehaviour
             GetComponentInParent<Boss_health_bar>()?.TakeAchivement();
             Destroy(gameObject);
         }
+    }
+    public void DealDamageToEnemy(int Damage) {
+        Enemys_health -= Damage;
+        DeadCheck();
     }
     
 }

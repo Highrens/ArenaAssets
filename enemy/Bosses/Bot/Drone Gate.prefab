@@ -112,13 +112,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemys_health: 50
-  controlled_Door: []
   Enemys_Max_health: 0
+  controlled_Door: []
   Explode: {fileID: 6170475625676571393, guid: 889e8f6dbcaa9e845b5d77c5ea4290b0, type: 3}
   Loot: {fileID: 0}
   Chance_no_drop: 0.5
   arena: {fileID: 0}
   arena_number: 0
+  Player: {fileID: 0}
 --- !u!1 &1122319596132439281
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,13 +378,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemys_health: 50
-  controlled_Door: []
   Enemys_Max_health: 0
+  controlled_Door: []
   Explode: {fileID: 6170475625676571393, guid: 889e8f6dbcaa9e845b5d77c5ea4290b0, type: 3}
   Loot: {fileID: 0}
   Chance_no_drop: 0.5
   arena: {fileID: 0}
   arena_number: 0
+  Player: {fileID: 0}
 --- !u!1 &4235649028100179501
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,13 +498,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemys_health: 50
-  controlled_Door: []
   Enemys_Max_health: 0
+  controlled_Door: []
   Explode: {fileID: 6170475625676571393, guid: 889e8f6dbcaa9e845b5d77c5ea4290b0, type: 3}
   Loot: {fileID: 0}
   Chance_no_drop: 0.5
   arena: {fileID: 0}
   arena_number: 0
+  Player: {fileID: 0}
 --- !u!1 &4636592025879068102
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,7 +617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1d7872d0f2da7448df42f3848ec327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BeamDamage: 5
+  BeamDamage: 10
 --- !u!1 &4963746809138741690
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,6 +944,7 @@ GameObject:
   - component: {fileID: 4134790289877929483}
   - component: {fileID: 2285943990973950875}
   - component: {fileID: 2390595339309175803}
+  - component: {fileID: 1995644435158984819}
   m_Layer: 11
   m_Name: Lazers
   m_TagString: Untagged
@@ -1027,3 +1031,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1995644435158984819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6744205690919178012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1d7872d0f2da7448df42f3848ec327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BeamDamage: 5

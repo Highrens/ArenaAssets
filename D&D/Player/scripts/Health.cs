@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
     public int armor;
     public int armor_max = 100;
     public bool isRunning;
-    
+    bool invincible = false;
     public void FixedUpdate()
     {
         bars[0].value = Player_health / Health_max;
@@ -44,10 +44,12 @@ public class Health : MonoBehaviour
         t += Time.deltaTime;
         damageTimer += Time.deltaTime;
 
-        if (damageTimer > .3f)
+        if (damageTimer > .5f)
         {
+
+            invincible = false;
             damageScreen.SetActive(false);
-            damageTimer = 0f;
+
         }
 
         if (Player_health <= 0) Death();
@@ -81,7 +83,10 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (invincible == true) return;
         Player_health -= damage;
+        invincible = true;
+        damageTimer = 0f;
         damageScreen.SetActive(true);
     }
 

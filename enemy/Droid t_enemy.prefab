@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1d7872d0f2da7448df42f3848ec327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BeamDamage: 1
+  BeamDamage: 10
 --- !u!1 &1649750565789934827
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,13 +424,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemys_health: 175
-  controlled_Door: []
   Enemys_Max_health: 0
+  controlled_Door: []
   Explode: {fileID: 6170475625676571393, guid: 889e8f6dbcaa9e845b5d77c5ea4290b0, type: 3}
   Loot: {fileID: 9152165525193568532, guid: b4dc1e701d858924b8a0b49188c40543, type: 3}
   Chance_no_drop: 0.205
   arena: {fileID: 0}
   arena_number: 4
+  Player: {fileID: 0}
 --- !u!114 &7198353092608732672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -668,7 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1d7872d0f2da7448df42f3848ec327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BeamDamage: 1
+  BeamDamage: 10
 --- !u!1 &6472455558399398114
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1d7872d0f2da7448df42f3848ec327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BeamDamage: 1
+  BeamDamage: 10
 --- !u!1 &6472455559212711435
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1d7872d0f2da7448df42f3848ec327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BeamDamage: 1
+  BeamDamage: 10
 --- !u!1001 &8695000632824285568
 PrefabInstance:
   m_ObjectHideFlags: 0

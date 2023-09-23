@@ -11,6 +11,8 @@ public class Projectile_frend : MonoBehaviour
     public bool destroyByEnemyTouch = true;
     public bool destroyByObstacles = true;
     public GameObject Player;
+    public bool singleDamage = false;
+    bool damageDeald = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +24,15 @@ public class Projectile_frend : MonoBehaviour
 
         }
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
+        if (damageDeald == true) return;
+
         if (other.transform.gameObject.layer == 11 && other.gameObject.GetComponentInParent<Enemy_Health>() != null)
         {
+            if (singleDamage) damageDeald = true; 
             Enemy_Health enemy_Health = other.gameObject.GetComponentInParent<Enemy_Health>();
-            enemy_Health.Enemys_health -= Damage;
+            enemy_Health.DealDamageToEnemy(Damage);
             enemy_Health.Player = Player;
             if (destroyByEnemyTouch)
             {

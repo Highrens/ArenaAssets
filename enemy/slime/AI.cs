@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class AI : MonoBehaviour
 {
-    NavMeshAgent agent;
+    public NavMeshAgent agent;
 
     public bool followPlayer;
     public GameObject Target;
@@ -15,12 +15,11 @@ public class AI : MonoBehaviour
    // public Transform RayPoint;
    // public float SizeOfRay;
    // RaycastHit Hit;
-     Animator anim;
+   public  Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        agent = GetComponentInParent<NavMeshAgent>();
-        anim = GetComponentInChildren<Animator>();
+     //   anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -28,8 +27,8 @@ public class AI : MonoBehaviour
     {
         if (Target && followPlayer)
         {
-            Quaternion rot = Quaternion.LookRotation(new Vector3(Target.transform.position.x, transform.position.y, Target.transform.position.z) - transform.position);
-            transform.rotation = Quaternion.Lerp(transform.rotation, rot, rotateSpeed * Time.deltaTime);
+            //Quaternion rot = Quaternion.LookRotation(new Vector3(Target.transform.position.x, transform.position.y, Target.transform.position.z) - transform.position);
+            //transform.rotation = Quaternion.Lerp(transform.rotation, rot, rotateSpeed * Time.deltaTime);
             agent.destination = Target.transform.position;
             t += Time.deltaTime;
         }
